@@ -127,7 +127,238 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Kampilan Warrior Layout_0
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 817
+        width: 256
+        height: 301
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a897c72a6e36f324fbc8854b595c57f6
+      internalID: 448796218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kampilan Warrior Layout_1
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 781
+        width: 267
+        height: 362
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dca0e734986e1104ab9d261bf5988426
+      internalID: 831931085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kailye_Torso_Back_Upper
+      rect:
+        serializedVersion: 2
+        x: 894
+        y: 946
+        width: 375
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dad9619ff94aa58418d0b7fe5decb2c8
+      internalID: 261802630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kailye_Torso_Front
+      rect:
+        serializedVersion: 2
+        x: 1608
+        y: 517
+        width: 754
+        height: 650
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe4d661f309e0894590368dcf60d250c
+      internalID: 1211664350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kampilan Warrior Layout_4
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 814
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ba8a65b9c3118741ab2fb215289da75
+      internalID: -574569337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kailye_Torso__Back_Lower
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 588
+        width: 482
+        height: 276
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f1917d72082343429cce42a74ce04ea
+      internalID: 573704373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kampilan Warrior Layout_6
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 29
+        width: 212
+        height: 510
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9be5884c25541a4dbfa564b73b8c02a
+      internalID: -2138031634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kampilan Warrior Layout_7
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 27
+        width: 210
+        height: 516
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfa7d5f4104991749ad307e577bced30
+      internalID: -1242267542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kailye_Head
+      rect:
+        serializedVersion: 2
+        x: 913
+        y: 113
+        width: 429
+        height: 391
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6b3e42cbb0d5384e93eed2891cedd49
+      internalID: -332888931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KampilanSword_Front
+      rect:
+        serializedVersion: 2
+        x: 1530
+        y: 98
+        width: 341
+        height: 181
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9694cb3b65b748340ba03dc3e9caaf0a
+      internalID: -208126027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KampilanSword_Back
+      rect:
+        serializedVersion: 2
+        x: 2126
+        y: 107
+        width: 201
+        height: 193
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51a3e125fe42efd4a984f8fa68a18eae
+      internalID: -1075699382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -138,7 +369,19 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Kailye_Torso__Back_Lower: 573704373
+      Kampilan Warrior Layout_1: 831931085
+      Kampilan Warrior Layout_6: -2138031634
+      Kailye_Torso_Front: 1211664350
+      Kampilan Warrior Layout_10: -527925479
+      Kailye_Torso_Back_Upper: 261802630
+      KampilanSword_Back: -1075699382
+      Kampilan Warrior Layout_4: -574569337
+      Kailye_Head: -332888931
+      Kampilan Warrior Layout_7: -1242267542
+      KampilanSword_Front: -208126027
+      Kampilan Warrior Layout_0: 448796218
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
