@@ -1391,7 +1391,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: -0.1588567, y: -0.17227057, z: 0}
+        value: {x: -0.18, y: -0.2, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -1401,8 +1401,8 @@ AnimationClip:
       - serializedVersion: 3
         time: 1.7
         value: {x: -0.15885673, y: -0.108, z: 0}
-        inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: 0, y: 0, z: 0}
+        inSlope: {x: 0.000000039687087, y: 0, z: 0}
+        outSlope: {x: 0.000000039687087, y: 0, z: 0}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
@@ -1828,6 +1828,22 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     path: Kampilan_Head
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: 0.123, y: 0.436, z: 0}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0, y: 0.33333334, z: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Belt/Kampilan_Belt_Down_Right/RightBelt_Lower_1
   m_ScaleCurves:
   - curve:
       serializedVersion: 2
@@ -2279,6 +2295,13 @@ AnimationClip:
       isPPtrCurve: 0
     - serializedVersion: 2
       path: 91009475
+      attribute: 1
+      script: {fileID: 0}
+      typeID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 2855798014
       attribute: 1
       script: {fileID: 0}
       typeID: 4
@@ -5557,7 +5580,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -0.1588567
+        value: -0.18
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -5567,8 +5590,8 @@ AnimationClip:
       - serializedVersion: 3
         time: 1.7
         value: -0.15885673
-        inSlope: 0
-        outSlope: 0
+        inSlope: 0.000000039687087
+        outSlope: 0.000000039687087
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
@@ -5594,7 +5617,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -0.17227057
+        value: -0.2
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -8433,6 +8456,63 @@ AnimationClip:
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
     path: Legs/Kampilan_left_Leg/Left_Leg_1
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.123
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.x
+    path: Belt/Kampilan_Belt_Down_Right/RightBelt_Lower_1
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.436
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.y
+    path: Belt/Kampilan_Belt_Down_Right/RightBelt_Lower_1
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.z
+    path: Belt/Kampilan_Belt_Down_Right/RightBelt_Lower_1
     classID: 4
     script: {fileID: 0}
   m_EulerEditorCurves:
