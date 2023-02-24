@@ -110,4 +110,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce1b9c9293b0db94f88a80d130e5f4fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0
+  Heal: 5
+  myCam: {fileID: 0}
