@@ -11,6 +11,7 @@ public class CardSpawner : MonoBehaviour
     public GameObject[] Deck;
 
     enemyAttack turnStart;
+    PlayerHealth maxHealth;
 
     public bool myTurn;
     public bool enemy1;
@@ -22,7 +23,7 @@ public class CardSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        turnStart = GameObject.Find("Enemy").GetComponent<enemyAttack>();
+        maxHealth = GameObject.Find("Player").GetComponent<PlayerHealth>();
         
        
 
@@ -40,6 +41,11 @@ public class CardSpawner : MonoBehaviour
         }
         if (myTurn == false)
         {
+            if (maxHealth.currentHealth >= maxHealth.maxHealth)
+            {
+
+                maxHealth.currentHealth = maxHealth.maxHealth;
+            }
             for (int i = 0; i < spawnPoint.Length; i++)
             {
                 Instantiate(Deck[Random.Range(0, Deck.Length)], spawnPoint[i].transform.position, Quaternion.identity);
