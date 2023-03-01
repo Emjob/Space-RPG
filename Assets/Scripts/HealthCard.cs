@@ -23,9 +23,9 @@ public class HealthCard : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         Debug.Log("HELP");
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "PlayerOne")
         {
-            other.GetComponent<Collider>().GetComponent<PlayerHealth>().Heal(Heal);
+            other.GetComponent<Collider>().GetComponent<Health>().Heal(Heal);
             Count.counter += 1;
             Destroy(gameObject);
         }

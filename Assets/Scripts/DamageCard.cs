@@ -28,7 +28,7 @@ public class DamageCard : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         Debug.Log("HELP");
-        if(other.gameObject.tag == "Enemy" )
+        if(other.gameObject.tag == "EnemyOne" )
         {
             other.GetComponent<Collider>().GetComponent<EnemyHealth>().TakeDamage(damage);
             Count.counter += 1;

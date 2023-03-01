@@ -24,7 +24,7 @@ public class fuck : MonoBehaviour
             int n = Random.Range(0, 2);
             if (n == 0)
             {
-                GameObject.Find("Player").GetComponent<PlayerHealth>().TakeDamage(damage);
+                GameObject.Find("Player").GetComponent<Health>().TakeDamage(damage);
                 GetComponent<Renderer>().material.color = new Color(255, 0, 0);
 
             }

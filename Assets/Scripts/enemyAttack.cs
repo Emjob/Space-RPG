@@ -25,7 +25,7 @@ public class enemyAttack : MonoBehaviour
         int n = Random.Range(0, 2);
             if(n == 0)
             {
-                GameObject.Find("Player").GetComponent<PlayerHealth>().TakeDamage(damage);
+                GameObject.Find("PlayerOne").GetComponent<Health>().TakeDamage(damage);
                 GetComponent<Renderer>().material.color = new Color(255, 0, 0);
 
             }
@@ -34,9 +34,7 @@ public class enemyAttack : MonoBehaviour
                 GetComponent<EnemyHealth>().Heal(Heal);
                 GetComponent<Renderer>().material.color = new Color(255, 0, 211);
             }
-            turnCounter.enemy1 = false;
-            turnCounter.myTurn = false;
-            turnCounter.counter = 0;
+            
         }
     }
 }

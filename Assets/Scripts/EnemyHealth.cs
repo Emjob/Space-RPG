@@ -10,10 +10,10 @@ public class EnemyHealth : MonoBehaviour
     public bool isEnemyDead = false;
 
     public EnemyHealthBar healthBar;
-
+    public Stats Health;
     public void Start()
     {
-        currentHealth = maxHealth;
+        currentHealth = Health.maxHealth;
     }
     public void TakeDamage(int damage)
     {
