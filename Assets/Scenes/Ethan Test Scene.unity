@@ -236,7 +236,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 20}
+  m_AnchoredPosition: {x: 232, y: 20}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &293929462
@@ -292,6 +292,99 @@ MonoBehaviour:
   healthBarImage: {fileID: 953718363}
   cHealth: {fileID: 1298242117}
   Health: {fileID: 1298242123}
+--- !u!1 &415162221
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 415162223}
+  - component: {fileID: 415162225}
+  - component: {fileID: 415162224}
+  - component: {fileID: 415162222}
+  m_Layer: 5
+  m_Name: PlayerHealthBar (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &415162222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 415162221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ee05eafcc1cf694cb540ecc9800b238, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBarImage: {fileID: 538668201}
+  cHealth: {fileID: 1987395562}
+  Health: {fileID: 1987395567}
+--- !u!224 &415162223
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 415162221}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.7729, y: 0.30065, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 538668203}
+  m_Father: {fileID: 520518383}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: -183, y: 20}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &415162224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 415162221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &415162225
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 415162221}
+  m_CullTransparentMesh: 1
 --- !u!1 &491594272
 GameObject:
   m_ObjectHideFlags: 0
@@ -455,8 +548,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72bacb27fb0f5e24791333613f77dd90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0
-  Heal: 0
+  damage: 10
+  Heal: 10
+  players: []
 --- !u!1 &507925614
 GameObject:
   m_ObjectHideFlags: 0
@@ -468,7 +562,7 @@ GameObject:
   - component: {fileID: 507925615}
   m_Layer: 0
   m_Name: Card
-  m_TagString: Untagged
+  m_TagString: SpawnPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -584,6 +678,7 @@ RectTransform:
   - {fileID: 691881395}
   - {fileID: 2024117633}
   - {fileID: 2035568189}
+  - {fileID: 415162223}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -592,6 +687,82 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &538668200
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 538668203}
+  - component: {fileID: 538668202}
+  - component: {fileID: 538668201}
+  m_Layer: 5
+  m_Name: PlayerHealthInner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &538668201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 538668200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.11446441, g: 0.9716981, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 3
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 0
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &538668202
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 538668200}
+  m_CullTransparentMesh: 1
+--- !u!224 &538668203
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 538668200}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 415162223}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &545153371
 GameObject:
   m_ObjectHideFlags: 0
@@ -641,24 +812,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42c8e9f869b296d4cbb6b464746c071a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPoint:
-  - {fileID: 507925614}
-  - {fileID: 1296095353}
-  - {fileID: 1441365469}
-  - {fileID: 2087697017}
-  - {fileID: 1274932341}
   damageCard: {fileID: 2993684642457954185, guid: 03516791c52bf124783a0635220990b3, type: 3}
   healthCard: {fileID: 1188686235820266820, guid: f8cfd0cf7a6d0eb469faad7aae4cfce9, type: 3}
   Deck:
   - {fileID: 2993684642457954185, guid: 03516791c52bf124783a0635220990b3, type: 3}
   - {fileID: 1188686235820266820, guid: f8cfd0cf7a6d0eb469faad7aae4cfce9, type: 3}
+  activeDeck:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   Health: {fileID: 1298242123}
   myTurn: 0
-  enemy1: 0
-  enemy2: 0
-  enemy3: 0
   counter: 0
   con: 0
+  shuffle: 0
 --- !u!1 &691881394
 GameObject:
   m_ObjectHideFlags: 0
@@ -957,8 +1136,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72bacb27fb0f5e24791333613f77dd90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
+  damage: 10
   Heal: 10
+  players: []
 --- !u!114 &1155592644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1004,7 +1184,7 @@ GameObject:
   - component: {fileID: 1274932342}
   m_Layer: 0
   m_Name: Card (4)
-  m_TagString: Untagged
+  m_TagString: SpawnPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1035,7 +1215,7 @@ GameObject:
   - component: {fileID: 1296095354}
   m_Layer: 0
   m_Name: Card (1)
-  m_TagString: Untagged
+  m_TagString: SpawnPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1166,7 +1346,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1298242116}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.88, y: 0.5, z: -17.67}
+  m_LocalPosition: {x: 4.52, y: 0.5, z: -17.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1234,10 +1414,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3f633d89121f3542bffb9837b5b169c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemies:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   speed: []
   startOfTurn: 0
   changeTurn: 0
@@ -1420,8 +1596,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72bacb27fb0f5e24791333613f77dd90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0
-  Heal: 0
+  damage: 10
+  Heal: 10
+  players: []
 --- !u!1 &1441365469
 GameObject:
   m_ObjectHideFlags: 0
@@ -1433,7 +1610,7 @@ GameObject:
   - component: {fileID: 1441365470}
   m_Layer: 0
   m_Name: Card (3)
-  m_TagString: Untagged
+  m_TagString: SpawnPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1745,7 +1922,7 @@ MonoBehaviour:
   isPlayerDead: 0
   endTurn: 0
   isEnemyDead: 0
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 415162222}
   baseStats: {fileID: 1987395567}
 --- !u!65 &1987395563
 BoxCollider:
@@ -1818,7 +1995,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1987395560}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.6, y: 0.5, z: -18.04}
+  m_LocalPosition: {x: -5.42, y: 0.5, z: -17.45}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2136,7 +2313,7 @@ GameObject:
   - component: {fileID: 2087697018}
   m_Layer: 0
   m_Name: Card (2)
-  m_TagString: Untagged
+  m_TagString: SpawnPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

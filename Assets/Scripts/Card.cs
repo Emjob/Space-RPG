@@ -8,7 +8,7 @@ public class Card : MonoBehaviour
     public int damage;
     public int speed;
 
-    int con;
+  //  int con;
 
     public Camera myCam;
 
@@ -29,7 +29,7 @@ public class Card : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("HELP");
+       // Debug.Log("HELP");
         if (other.gameObject.tag == "Enemy" && damage > 0)
         {
             other.GetComponent<Collider>().GetComponent<Health>().EnemyTakeDamage(damage);
@@ -40,7 +40,6 @@ public class Card : MonoBehaviour
         {
             other.GetComponent<Collider>().GetComponent<Health>().PlayerHeal(Heal);
             Count.counter += 1;
-            con += 1;
             Destroy(gameObject);
         }
     }

@@ -42,15 +42,15 @@ public class Health : MonoBehaviour
             isPlayerDead = true;
         }
         healthBar.UpdateHealthBar();
-        
-        
+ 
     }
     public void PlayerHeal(int Heal)
     {
-
-        currentHealth = currentHealth + Heal;
-        healthBar.UpdateHealthBar();
-
+        if (currentHealth < baseStats.maxHealth)
+        {
+            currentHealth = currentHealth + Heal;
+            healthBar.UpdateHealthBar();
+        }
     }
 
     void HealthReset()
@@ -72,10 +72,12 @@ public class Health : MonoBehaviour
     }
     public void EnemyHeal(int Heal)
     {
-        currentHealth = currentHealth + Heal;
-        healthBar.UpdateHealthBar();
-        GetComponent<Renderer>().material.color = new Color(255, 0, 211);
-        
+        if (currentHealth < baseStats.maxHealth)
+        {
+            currentHealth = currentHealth + Heal;
+            healthBar.UpdateHealthBar();
+            GetComponent<Renderer>().material.color = new Color(255, 0, 211);
+        }
     }
 
     private void Update()
@@ -97,10 +99,5 @@ public class Health : MonoBehaviour
             change.changeTurn = true;
         }
     }
-   public void EnemyTurn()
-    {
-        turn.EnemyTurn();
-        change.changeTurn = true;
-       
-    }
+   
 }

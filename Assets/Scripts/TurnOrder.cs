@@ -7,7 +7,7 @@ public class TurnOrder : MonoBehaviour
 {
 
 
-    public GameObject[] enemies = new GameObject[3];
+    GameObject[] enemies = new GameObject[3];
     GameObject[] players = new GameObject[3];
     //Dictionary<string, int> playerSpeed = new Dictionary<string, int>();
     public List<GameObject> speed;
@@ -16,27 +16,23 @@ public class TurnOrder : MonoBehaviour
     public bool changeTurn;
 
     public int i;
-    public void Start()
+    
+    private void Update()
     {
         players = GameObject.FindGameObjectsWithTag("Player");
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
 
-        
-        
-        for (int i = 0; i < enemies.Length; i++)
-        {
-            speed.Add(enemies[i]);
-        }
-        for (int i = 0; i < players.Length; i++)
-        {
-            speed.Add(players[i]);
-        }
-    }
-    private void Update()
-    {
-       
-            if (startOfTurn == true || i > speed.Count)
+        if (startOfTurn == true || i > speed.Count)
             {
+            speed.Clear();
+            for (int i = 0; i < enemies.Length; i++)
+            {
+                speed.Add(enemies[i]);
+            }
+            for (int i = 0; i < players.Length; i++)
+            {
+                speed.Add(players[i]);
+            }
             i = -1;
                 speed.Sort(delegate (GameObject a, GameObject b)
                 {
@@ -61,9 +57,9 @@ public class TurnOrder : MonoBehaviour
             }
             if(speed[i].CompareTag("Enemy"))
             {
-                speed[i].GetComponent<Health>().EnemyTurn();
+                speed[i].GetComponent<enemyAttack>().EnemyTurn();
             }
-            Debug.Log(speed[i] + "");
+        //    Debug.Log(speed[i] + "");
             changeTurn = false;
             
         }

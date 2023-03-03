@@ -5,37 +5,49 @@ using UnityEngine;
 public class CardSpawner : MonoBehaviour
 {
 
-    public GameObject[] spawnPoint;
+    GameObject[] spawnPoint;
     public GameObject damageCard;
     public GameObject healthCard;
     public GameObject[] Deck;
+    public GameObject[] activeDeck = new GameObject[15];
+    GameObject[] RemainingCards;
 
    
     public Stats Health;
     TurnOrder change;
 
     public bool myTurn;
-    public bool enemy1;
-    public bool enemy2;
-    public bool enemy3;
+   
+
     public int counter;
     public int con;
+    public int shuffle;
     
     // Start is called before the first frame update
     void Start()
     {
 
         change = GameObject.Find("TurnChanger").GetComponent<TurnOrder>();
+        spawnPoint = GameObject.FindGameObjectsWithTag("SpawnPoint");
+        for (int i = 0; i < activeDeck.Length; i++)
+        {
+            activeDeck[i] = Deck[Random.Range(0, 2)];
+        }
 
-        
-       
     }
 
     // Update is called once per frame
     public void Update()
     {
+       
+
+        RemainingCards = GameObject.FindGameObjectsWithTag("Card");
         if (counter == 1)
         {
+            for(int i = 0; i < RemainingCards.Length; i++)
+            {
+                Destroy(RemainingCards[i]);
+            }
             change.changeTurn = true;
             counter = 0;
         }
@@ -43,7 +55,7 @@ public class CardSpawner : MonoBehaviour
 
     public void Draw()
     {
-
+       con = 0;
         if (con < 5)
         {
             for (int i = 0; i < spawnPoint.Length; i++)
@@ -52,6 +64,10 @@ public class CardSpawner : MonoBehaviour
                 con += 1;
             }
         }
+       // if(counter == 1)
+       // {
+       //     change.changeTurn = true;
+       // }
         
     }
 }

@@ -11,10 +11,13 @@ public class enemyAttack : MonoBehaviour
     public int Heal;
 
     TurnOrder change;
+
+   public GameObject[] players;
     // Start is called before the first frame update
     void Start()
     {
         change = GameObject.Find("TurnChanger").GetComponent<TurnOrder>();
+        players = GameObject.FindGameObjectsWithTag("Player");
     }
 
     // Update is called once per frame
@@ -24,14 +27,17 @@ public class enemyAttack : MonoBehaviour
         int n = Random.Range(0, 2);
             if(n == 0)
             {
-                GameObject.Find("Player").GetComponent<Health>().PlayerTakeDamage(damage);
+                players[Random.Range(0,2)].GetComponent<Health>().PlayerTakeDamage(damage);
+            Debug.Log("Attack");
             GetComponent<Renderer>().material.color = new Color(255, 0, 0);
+            change.changeTurn = true;
 
         }
             if(n == 1)
             {
                 GetComponent<Health>().EnemyHeal(Heal);
-               
+            Debug.Log("Heal");
+             change.changeTurn = true;             
         }
         
 
