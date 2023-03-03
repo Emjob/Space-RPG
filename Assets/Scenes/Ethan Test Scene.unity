@@ -309,8 +309,8 @@ GameObject:
   - component: {fileID: 491594284}
   - component: {fileID: 491594283}
   m_Layer: 0
-  m_Name: Enemy (1)
-  m_TagString: EnemyTwo
+  m_Name: Enemy(1)
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -407,7 +407,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &491594282
 MonoBehaviour:
@@ -439,11 +439,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 0
   isPlayerDead: 0
-  turnStart: 0
   endTurn: 0
   isEnemyDead: 0
-  isPlayer: 0
-  isEnemy: 0
   healthBar: {fileID: 2024117636}
   baseStats: {fileID: 491594282}
 --- !u!114 &491594284
@@ -661,6 +658,7 @@ MonoBehaviour:
   enemy2: 0
   enemy3: 0
   counter: 0
+  con: 0
 --- !u!1 &691881394
 GameObject:
   m_ObjectHideFlags: 0
@@ -847,8 +845,8 @@ GameObject:
   - component: {fileID: 1155592644}
   - component: {fileID: 1155592645}
   m_Layer: 0
-  m_Name: Enemy
-  m_TagString: EnemyOne
+  m_Name: Anemy
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -959,7 +957,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72bacb27fb0f5e24791333613f77dd90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
+  damage: 1
   Heal: 10
 --- !u!114 &1155592644
 MonoBehaviour:
@@ -991,11 +989,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 0
   isPlayerDead: 0
-  turnStart: 0
   endTurn: 0
   isEnemyDead: 0
-  isPlayer: 0
-  isEnemy: 0
   healthBar: {fileID: 691881399}
   baseStats: {fileID: 1155592644}
 --- !u!1 &1274932341
@@ -1077,7 +1072,7 @@ GameObject:
   - component: {fileID: 1298242123}
   m_Layer: 0
   m_Name: Player
-  m_TagString: PlayerOne
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1096,11 +1091,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 20
   isPlayerDead: 0
-  turnStart: 0
   endTurn: 0
   isEnemyDead: 0
-  isPlayer: 0
-  isEnemy: 0
   healthBar: {fileID: 293929464}
   baseStats: {fileID: 1298242123}
 --- !u!65 &1298242118
@@ -1242,10 +1234,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3f633d89121f3542bffb9837b5b169c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
-  enemyOne: {fileID: 0}
-  enemyTwo: {fileID: 0}
-  enemyThree: {fileID: 0}
+  enemies:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   speed: []
   startOfTurn: 0
   changeTurn: 0
@@ -1283,7 +1275,7 @@ GameObject:
   - component: {fileID: 1427379980}
   m_Layer: 0
   m_Name: Enemy (2)
-  m_TagString: EnemyThree
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1380,7 +1372,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1427379979
 MonoBehaviour:
@@ -1412,11 +1404,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 0
   isPlayerDead: 0
-  turnStart: 0
   endTurn: 0
   isEnemyDead: 0
-  isPlayer: 0
-  isEnemy: 0
   healthBar: {fileID: 2035568192}
   baseStats: {fileID: 1427379979}
 --- !u!114 &1427379981
@@ -1754,11 +1743,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 20
   isPlayerDead: 0
-  turnStart: 0
   endTurn: 0
   isEnemyDead: 0
-  isPlayer: 0
-  isEnemy: 0
   healthBar: {fileID: 0}
   baseStats: {fileID: 1987395567}
 --- !u!65 &1987395563
@@ -1852,7 +1838,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 20
-  Speed: 10
+  Speed: 1
   Heal: 10
   Damage: 10
 --- !u!1 &2024117632

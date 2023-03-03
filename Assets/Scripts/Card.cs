@@ -6,8 +6,9 @@ public class Card : MonoBehaviour
 {
     public int Heal;
     public int damage;
+    public int speed;
 
-   
+    int con;
 
     public Camera myCam;
 
@@ -39,6 +40,7 @@ public class Card : MonoBehaviour
         {
             other.GetComponent<Collider>().GetComponent<Health>().PlayerHeal(Heal);
             Count.counter += 1;
+            con += 1;
             Destroy(gameObject);
         }
     }
@@ -50,11 +52,7 @@ public class Card : MonoBehaviour
             DragObject();
         }
         
-        if (Count.counter == 1)
-        {
-            Destroy(gameObject);
-
-        }
+        
     }
 
     private void OnMouseDown()
@@ -74,6 +72,7 @@ public class Card : MonoBehaviour
     {
         isDragging = false;
     }
+
 
     public void DragObject()
     {

@@ -44,7 +44,7 @@ public class TurnOrder : MonoBehaviour
                 });
             
             speed.Reverse();
-            speed[1].GetComponent<Health>().EnemyTurn();
+        //    speed[1].GetComponent<Health>().EnemyTurn();
             startOfTurn = false;
 
         }

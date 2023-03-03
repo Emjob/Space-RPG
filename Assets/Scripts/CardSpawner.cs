@@ -27,14 +27,18 @@ public class CardSpawner : MonoBehaviour
 
         change = GameObject.Find("TurnChanger").GetComponent<TurnOrder>();
 
-
+        
        
     }
 
     // Update is called once per frame
     public void Update()
     {
-       
+        if (counter == 1)
+        {
+            change.changeTurn = true;
+            counter = 0;
+        }
     }
 
     public void Draw()
