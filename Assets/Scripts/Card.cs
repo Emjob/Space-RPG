@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[ExecuteInEditMode]
-public class DamageCard : MonoBehaviour
+public class Card : MonoBehaviour
 {
-
+    public int Heal;
     public int damage;
+
+   
 
     public Camera myCam;
 
@@ -28,9 +29,15 @@ public class DamageCard : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         Debug.Log("HELP");
-        if(other.gameObject.tag == "EnemyOne" )
+        if (other.gameObject.tag == "Enemy" && damage > 0)
         {
             other.GetComponent<Collider>().GetComponent<Health>().EnemyTakeDamage(damage);
+            Count.counter += 1;
+            Destroy(gameObject);
+        }
+        if (other.gameObject.tag == "Player" && Heal > 0)
+        {
+            other.GetComponent<Collider>().GetComponent<Health>().PlayerHeal(Heal);
             Count.counter += 1;
             Destroy(gameObject);
         }
@@ -41,6 +48,12 @@ public class DamageCard : MonoBehaviour
         if (isDragging)
         {
             DragObject();
+        }
+        
+        if (Count.counter == 1)
+        {
+            Destroy(gameObject);
+
         }
     }
 

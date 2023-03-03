@@ -5,11 +5,10 @@ using System;
 
 public class TurnOrder : MonoBehaviour
 {
-    public GameObject Player;
-    public GameObject enemyOne;
-    public GameObject enemyTwo;
-    public GameObject enemyThree;
 
+
+    public GameObject[] enemies = new GameObject[3];
+    GameObject[] players = new GameObject[3];
     //Dictionary<string, int> playerSpeed = new Dictionary<string, int>();
     public List<GameObject> speed;
 
@@ -19,37 +18,54 @@ public class TurnOrder : MonoBehaviour
     public int i;
     public void Start()
     {
-        Player = GameObject.FindGameObjectWithTag("PlayerOne");
-        enemyOne = GameObject.FindGameObjectWithTag("EnemyOne");
-        enemyTwo = GameObject.FindGameObjectWithTag("EnemyTwo");
-        enemyThree = GameObject.FindGameObjectWithTag("EnemyThree");
-        speed.Add(Player);
-        speed.Add(enemyOne);
-        speed.Add(enemyTwo);
-        speed.Add(enemyThree);
+        players = GameObject.FindGameObjectsWithTag("Player");
+        enemies = GameObject.FindGameObjectsWithTag("Enemy");
+
+        
+        
+        for (int i = 0; i < enemies.Length; i++)
+        {
+            speed.Add(enemies[i]);
+        }
+        for (int i = 0; i < players.Length; i++)
+        {
+            speed.Add(players[i]);
+        }
     }
     private void Update()
     {
        
-            if (startOfTurn == true)
+            if (startOfTurn == true || i > speed.Count)
             {
+            i = -1;
                 speed.Sort(delegate (GameObject a, GameObject b)
                 {
                     return (a.GetComponent<Stats>().Speed).CompareTo(b.GetComponent<Stats>().Speed);
                 });
             
             speed.Reverse();
+            speed[1].GetComponent<Health>().EnemyTurn();
             startOfTurn = false;
 
         }
 
             if(changeTurn == true)
         {
-            i = -1;
+            
             i += 1;
-            speed[i].GetComponent<Health>().turnStart = true;
-            Debug.Log(i.ToString());
+            
+            if (speed[i].CompareTag("Player"))
+            {
+                speed[i].GetComponent<Health>().Playerturn();
+                
+            }
+            if(speed[i].CompareTag("Enemy"))
+            {
+                speed[i].GetComponent<Health>().EnemyTurn();
+            }
+            Debug.Log(speed[i] + "");
             changeTurn = false;
+            
         }
         
     }

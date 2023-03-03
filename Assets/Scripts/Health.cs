@@ -6,21 +6,33 @@ public class Health : MonoBehaviour
 {
     public float currentHealth;
 
-    public bool isPlayerDead = false;
-    public bool turnStart;
+    public bool isPlayerDead;
     public bool endTurn;
+    public bool isEnemyDead;
+    
 
-    public PlayerHealthBar healthBar;
+    GameObject[] enemies = new GameObject[3];
+
+    public HealthBar healthBar;
     public Stats baseStats;
-     CardSpawner draw;
-     TurnOrder change;
+    CardSpawner draw;
+    TurnOrder change;
+    enemyAttack turn;
     private void Start()
     {
+        enemies = GameObject.FindGameObjectsWithTag("Enemy");
+
         currentHealth = baseStats.maxHealth;
-         draw =  GameObject.Find("Holder").GetComponent<CardSpawner>();
-            change = GameObject.Find("TurnChanger").GetComponent<TurnOrder>();
+        draw = GameObject.Find("Holder").GetComponent<CardSpawner>();
+        change = GameObject.Find("TurnChanger").GetComponent<TurnOrder>();
+        for (int i = 0; i < enemies.Length; i++)
+        {
+            turn = enemies[i].GetComponent<enemyAttack>();
+        }
+
+
     }
-    public void TakeDamage(int damage)
+    public void PlayerTakeDamage(int damage)
     {
         currentHealth = currentHealth - damage;
 
@@ -30,8 +42,10 @@ public class Health : MonoBehaviour
             isPlayerDead = true;
         }
         healthBar.UpdateHealthBar();
+        
+        
     }
-    public void Heal(int Heal)
+    public void PlayerHeal(int Heal)
     {
 
         currentHealth = currentHealth + Heal;
@@ -39,16 +53,54 @@ public class Health : MonoBehaviour
 
     }
 
+    void HealthReset()
+    {
+
+    }
+
+    public void EnemyTakeDamage(int damage)
+    {
+        currentHealth = currentHealth - damage;
+
+        if (currentHealth <= 0 && isEnemyDead == false)
+        {
+            Destroy(gameObject);
+            isEnemyDead = true;
+
+        }
+        healthBar.UpdateHealthBar();
+    }
+    public void EnemyHeal(int Heal)
+    {
+        currentHealth = currentHealth + Heal;
+        healthBar.UpdateHealthBar();
+        GetComponent<Renderer>().material.color = new Color(255, 0, 211);
+        
+    }
+
     private void Update()
     {
-        if (turnStart == true)
-        {
-            draw.Draw();
-        }
+       
         if (endTurn == true)
         {
             change.changeTurn = true;
         }
     }
 
+    public void Playerturn()
+    {
+        draw.con = 0;
+        draw.Draw();
+        
+        if(draw.counter == 1)
+        {
+            change.changeTurn = true;
+        }
+    }
+   public void EnemyTurn()
+    {
+        turn.EnemyTurn();
+        change.changeTurn = true;
+       
+    }
 }

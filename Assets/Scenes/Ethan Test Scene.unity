@@ -210,7 +210,7 @@ GameObject:
   - component: {fileID: 293929460}
   - component: {fileID: 293929463}
   - component: {fileID: 293929462}
-  - component: {fileID: 293929461}
+  - component: {fileID: 293929464}
   m_Layer: 5
   m_Name: PlayerHealthBar
   m_TagString: Untagged
@@ -239,21 +239,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 20}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &293929461
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 293929459}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcae05a514aad854c8f6026288e0f623, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthBarImage: {fileID: 953718363}
-  player: {fileID: 1298242117}
-  Health: {fileID: 1298242123}
 --- !u!114 &293929462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -292,6 +277,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 293929459}
   m_CullTransparentMesh: 1
+--- !u!114 &293929464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 293929459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ee05eafcc1cf694cb540ecc9800b238, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBarImage: {fileID: 953718363}
+  cHealth: {fileID: 1298242117}
+  Health: {fileID: 1298242123}
 --- !u!1 &491594272
 GameObject:
   m_ObjectHideFlags: 0
@@ -305,9 +305,9 @@ GameObject:
   - component: {fileID: 491594277}
   - component: {fileID: 491594276}
   - component: {fileID: 491594274}
-  - component: {fileID: 491594281}
-  - component: {fileID: 491594280}
   - component: {fileID: 491594282}
+  - component: {fileID: 491594284}
+  - component: {fileID: 491594283}
   m_Layer: 0
   m_Name: Enemy (1)
   m_TagString: EnemyTwo
@@ -409,37 +409,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &491594280
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 491594272}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2622379a9c265e47be81706412e52c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentHealth: 0
-  maxHealth: 20
-  isEnemyDead: 0
-  healthBar: {fileID: 2024117636}
-  Health: {fileID: 491594282}
---- !u!114 &491594281
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 491594272}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fca8101a90040340aca036c022d0f3b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 5
-  Heal: 5
 --- !u!114 &491594282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -456,6 +425,41 @@ MonoBehaviour:
   Speed: 10
   Heal: 10
   Damage: 10
+--- !u!114 &491594283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 491594272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af3596f67a825fb4cb0626c94e3cf2d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 0
+  isPlayerDead: 0
+  turnStart: 0
+  endTurn: 0
+  isEnemyDead: 0
+  isPlayer: 0
+  isEnemy: 0
+  healthBar: {fileID: 2024117636}
+  baseStats: {fileID: 491594282}
+--- !u!114 &491594284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 491594272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72bacb27fb0f5e24791333613f77dd90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
+  Heal: 0
 --- !u!1 &507925614
 GameObject:
   m_ObjectHideFlags: 0
@@ -668,7 +672,7 @@ GameObject:
   - component: {fileID: 691881395}
   - component: {fileID: 691881398}
   - component: {fileID: 691881397}
-  - component: {fileID: 691881396}
+  - component: {fileID: 691881399}
   m_Layer: 5
   m_Name: EnemyHealthBar
   m_TagString: Untagged
@@ -697,20 +701,6 @@ RectTransform:
   m_AnchoredPosition: {x: 100, y: -20}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &691881396
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 691881394}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efd96eece2ca1cd438b1df1c991f4ef2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthBarImage: {fileID: 1917046890}
-  player: {fileID: 1155592637}
 --- !u!114 &691881397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -749,6 +739,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 691881394}
   m_CullTransparentMesh: 1
+--- !u!114 &691881399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 691881394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ee05eafcc1cf694cb540ecc9800b238, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBarImage: {fileID: 1917046890}
+  cHealth: {fileID: 1155592645}
+  Health: {fileID: 1155592644}
 --- !u!1 &953718361
 GameObject:
   m_ObjectHideFlags: 0
@@ -837,10 +842,10 @@ GameObject:
   - component: {fileID: 1155592640}
   - component: {fileID: 1155592639}
   - component: {fileID: 1155592638}
-  - component: {fileID: 1155592637}
   - component: {fileID: 1155592642}
   - component: {fileID: 1155592643}
   - component: {fileID: 1155592644}
+  - component: {fileID: 1155592645}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: EnemyOne
@@ -848,23 +853,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1155592637
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1155592636}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2622379a9c265e47be81706412e52c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentHealth: 20
-  maxHealth: 20
-  isEnemyDead: 0
-  healthBar: {fileID: 691881396}
-  Health: {fileID: 1155592644}
 --- !u!65 &1155592638
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -989,6 +977,27 @@ MonoBehaviour:
   Speed: 30
   Heal: 10
   Damage: 10
+--- !u!114 &1155592645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1155592636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af3596f67a825fb4cb0626c94e3cf2d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 0
+  isPlayerDead: 0
+  turnStart: 0
+  endTurn: 0
+  isEnemyDead: 0
+  isPlayer: 0
+  isEnemy: 0
+  healthBar: {fileID: 691881399}
+  baseStats: {fileID: 1155592644}
 --- !u!1 &1274932341
 GameObject:
   m_ObjectHideFlags: 0
@@ -1089,7 +1098,10 @@ MonoBehaviour:
   isPlayerDead: 0
   turnStart: 0
   endTurn: 0
-  healthBar: {fileID: 293929461}
+  isEnemyDead: 0
+  isPlayer: 0
+  isEnemy: 0
+  healthBar: {fileID: 293929464}
   baseStats: {fileID: 1298242123}
 --- !u!65 &1298242118
 BoxCollider:
@@ -1198,7 +1210,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 35
-  Speed: 1
+  Speed: 70
   Heal: 10
   Damage: 10
 --- !u!1 &1355558019
@@ -1265,10 +1277,10 @@ GameObject:
   - component: {fileID: 1427379976}
   - component: {fileID: 1427379975}
   - component: {fileID: 1427379974}
-  - component: {fileID: 1427379973}
   - component: {fileID: 1427379972}
-  - component: {fileID: 1427379978}
   - component: {fileID: 1427379979}
+  - component: {fileID: 1427379981}
+  - component: {fileID: 1427379980}
   m_Layer: 0
   m_Name: Enemy (2)
   m_TagString: EnemyThree
@@ -1292,23 +1304,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1427379973
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1427379970}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2622379a9c265e47be81706412e52c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentHealth: 20
-  maxHealth: 20
-  isEnemyDead: 0
-  healthBar: {fileID: 2035568192}
-  Health: {fileID: 1427379979}
 --- !u!65 &1427379974
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1387,20 +1382,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1427379978
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1427379970}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27bbd228f185221439c72f082c0306a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 5
-  Heal: 5
 --- !u!114 &1427379979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1417,6 +1398,41 @@ MonoBehaviour:
   Speed: 20
   Heal: 10
   Damage: 10
+--- !u!114 &1427379980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1427379970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af3596f67a825fb4cb0626c94e3cf2d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 0
+  isPlayerDead: 0
+  turnStart: 0
+  endTurn: 0
+  isEnemyDead: 0
+  isPlayer: 0
+  isEnemy: 0
+  healthBar: {fileID: 2035568192}
+  baseStats: {fileID: 1427379979}
+--- !u!114 &1427379981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1427379970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72bacb27fb0f5e24791333613f77dd90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
+  Heal: 0
 --- !u!1 &1441365469
 GameObject:
   m_ObjectHideFlags: 0
@@ -1740,7 +1756,10 @@ MonoBehaviour:
   isPlayerDead: 0
   turnStart: 0
   endTurn: 0
-  healthBar: {fileID: 293929461}
+  isEnemyDead: 0
+  isPlayer: 0
+  isEnemy: 0
+  healthBar: {fileID: 0}
   baseStats: {fileID: 1987395567}
 --- !u!65 &1987395563
 BoxCollider:
@@ -1923,11 +1942,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2024117632}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efd96eece2ca1cd438b1df1c991f4ef2, type: 3}
+  m_Script: {fileID: 11500000, guid: 6ee05eafcc1cf694cb540ecc9800b238, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   healthBarImage: {fileID: 210631189}
-  player: {fileID: 491594280}
+  cHealth: {fileID: 491594283}
+  Health: {fileID: 491594282}
 --- !u!1 &2035568188
 GameObject:
   m_ObjectHideFlags: 0
@@ -2015,11 +2035,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2035568188}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efd96eece2ca1cd438b1df1c991f4ef2, type: 3}
+  m_Script: {fileID: 11500000, guid: 6ee05eafcc1cf694cb540ecc9800b238, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   healthBarImage: {fileID: 2111759948}
-  player: {fileID: 1427379973}
+  cHealth: {fileID: 1427379980}
+  Health: {fileID: 1427379979}
 --- !u!1 &2038387047
 GameObject:
   m_ObjectHideFlags: 0

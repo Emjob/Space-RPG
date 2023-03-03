@@ -10,31 +10,31 @@ public class enemyAttack : MonoBehaviour
     public int damage;
     public int Heal;
 
-    CardSpawner turnCounter;
+    TurnOrder change;
     // Start is called before the first frame update
     void Start()
     {
-        turnCounter = GameObject.Find("Holder").GetComponent<CardSpawner>();
+        change = GameObject.Find("TurnChanger").GetComponent<TurnOrder>();
     }
 
     // Update is called once per frame
-    void Update()
+    public void EnemyTurn()
     {
-        if(turnCounter.enemy1 == true)
-        {
+        
         int n = Random.Range(0, 2);
             if(n == 0)
             {
-                GameObject.Find("PlayerOne").GetComponent<Health>().TakeDamage(damage);
-                GetComponent<Renderer>().material.color = new Color(255, 0, 0);
+                GameObject.Find("Player").GetComponent<Health>().PlayerTakeDamage(damage);
+            GetComponent<Renderer>().material.color = new Color(255, 0, 0);
 
-            }
+        }
             if(n == 1)
             {
-                GetComponent<EnemyHealth>().Heal(Heal);
-                GetComponent<Renderer>().material.color = new Color(255, 0, 211);
-            }
-            
+                GetComponent<Health>().EnemyHeal(Heal);
+               
         }
+        
+
+
     }
 }

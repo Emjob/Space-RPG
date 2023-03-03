@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerHealthBar : MonoBehaviour
+public class HealthBar : MonoBehaviour
 {
     public Image healthBarImage;
-    public Health player;
+    public Health cHealth;
     public Stats Health;
     public void UpdateHealthBar()
     {
-        healthBarImage.fillAmount = Mathf.Clamp(player.currentHealth / Health.maxHealth, 0, 1f);
+        healthBarImage.fillAmount = Mathf.Clamp(cHealth.currentHealth / Health.maxHealth, 0, 1f);
     }
 }

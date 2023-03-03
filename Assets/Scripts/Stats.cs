@@ -9,9 +9,5 @@ public class Stats : MonoBehaviour
     public int Heal = 10;
     public int Damage = 10;
 
-    private void Start()
-    {
-        maxHealth = 35;
-        Speed = 10;
-    }
+   
 }
