@@ -13,9 +13,11 @@ public class Health : MonoBehaviour
     public int healOnDelay;
     public int splash;
     private int delay;
+    private int gainShield;
+    public int turnCount;
+    public int turnCounting;
 
     public bool isPlayerDead;
-    public bool endTurn;
     public bool isEnemyDead;
     public bool hurt;
     public bool restore;
@@ -23,6 +25,7 @@ public class Health : MonoBehaviour
     public bool Dot;
     public bool DelayedHeal;
     public bool Splash;
+    public bool getShield;
 
     Collider Collider;
     
@@ -39,7 +42,7 @@ public class Health : MonoBehaviour
 
         currentHealth = baseStats.maxHealth;
 
-       
+        DotTurns = 2;
 
 
     }
@@ -63,6 +66,10 @@ public class Health : MonoBehaviour
         healOnDelay = Heal;
     }
 
+    public void Shielded(int shield)
+    {
+        gainShield = shield;
+    }
 
     public void EnemyTakeDamage(int damage)
     {
@@ -92,10 +99,21 @@ public class Health : MonoBehaviour
 
     private void Update()
     {
-
         
-        if(myturn == true)
+
+        if (myturn == true)
         {
+            if (turnCount == DotTurns)
+            {
+                damageOverTurn = 0;
+                Dot = false;
+            }
+            if (turnCounting == DotTurns)
+            {
+                getShield = false;
+                currentHealth = currentHealth - gainShield;
+                gainShield = 0;
+            }
             Collider.enabled = true;
             if(currentHealth > baseStats.maxHealth)
             {
@@ -155,6 +173,7 @@ public class Health : MonoBehaviour
             }
             if (Dot == true && myturn == true)
             {
+                
                 currentHealth = currentHealth - damageOverTurn;
                 if (currentHealth <= 0 && isEnemyDead == false)
                 {
@@ -163,19 +182,21 @@ public class Health : MonoBehaviour
 
                 }
                 healthBar.UpdateHealthBar();
-                int turnCount = 0;
-                turnCount += 1;
-                if(turnCount == DotTurns)
-                {
-                    damageOverTurn = 0;
-                    Dot = false;
-                }
                 
+                turnCount += 1;
+                
+                
+            }
+            if (getShield == true && myturn == true)
+            {
+                
+                currentHealth = currentHealth + gainShield;
+                        turnCounting += 1;  
             }
             myturn = false;
         }
+        
 
-      
     }
 
     private void OnTriggerEnter(Collider other)

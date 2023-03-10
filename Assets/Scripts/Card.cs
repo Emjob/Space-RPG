@@ -7,6 +7,7 @@ public class Card : MonoBehaviour
     public int Heal;
     public int damage;
     public int speed;
+    public int shield;
 
   //  int con;
 
@@ -69,6 +70,13 @@ public class Card : MonoBehaviour
         {
             other.GetComponent<Collider>().GetComponent<Health>().DelayedHeal = true;
             other.GetComponent<Collider>().GetComponent<Health>().PreparedHeal(Heal);
+            Count.counter += 1;
+            Destroy(gameObject);
+        }
+        if (other.gameObject.tag == "Player" && shield > 0 && Single)
+        {
+            other.GetComponent<Collider>().GetComponent<Health>().getShield = true;
+            other.GetComponent<Collider>().GetComponent<Health>().Shielded(shield);
             Count.counter += 1;
             Destroy(gameObject);
         }

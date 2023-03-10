@@ -9,6 +9,7 @@ public class CardSpawner : MonoBehaviour
     public GameObject[] Deck;
     public GameObject[] activeDeck = new GameObject[15];
     GameObject[] RemainingCards;
+    GameObject[] players;
 
    
     public Stats Health;
@@ -25,7 +26,7 @@ public class CardSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        
         change = GameObject.Find("TurnChanger").GetComponent<TurnOrder>();
         spawnPoint = GameObject.FindGameObjectsWithTag("SpawnPoint");
         for (int i = 0; i < 15; i++)
@@ -38,10 +39,10 @@ public class CardSpawner : MonoBehaviour
     // Update is called once per frame
     public void Update()
     {
-       
+        players = GameObject.FindGameObjectsWithTag("Player");
 
         RemainingCards = GameObject.FindGameObjectsWithTag("Card");
-        if (counter == 3)
+        if (counter == players.Length)
         {
             for(int i = 0; i < RemainingCards.Length; i++)
             {
