@@ -30,14 +30,15 @@ public class enemyAttack : MonoBehaviour
                 players[Random.Range(0,2)].GetComponent<Health>().PlayerTakeDamage(damage);
             Debug.Log("Attack");
             GetComponent<Renderer>().material.color = new Color(255, 0, 0);
-            change.changeTurn = true;
+
 
         }
             if(n == 1)
             {
                 GetComponent<Health>().EnemyHeal(Heal);
+            GetComponent<Renderer>().material.color = new Color(255, 0, 211);
             Debug.Log("Heal");
-             change.changeTurn = true;             
+       
         }
         
 

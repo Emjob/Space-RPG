@@ -16,7 +16,13 @@ public class TurnOrder : MonoBehaviour
     public bool changeTurn;
 
     public int i;
-    
+
+    CardSpawner hand;
+
+    private void Start()
+    {
+        hand = GameObject.Find("Holder").GetComponent<CardSpawner>();
+    }
     private void Update()
     {
         players = GameObject.FindGameObjectsWithTag("Player");
@@ -24,6 +30,7 @@ public class TurnOrder : MonoBehaviour
 
         if (startOfTurn == true || i > speed.Count)
             {
+            hand.Draw();
             speed.Clear();
             for (int i = 0; i < enemies.Length; i++)
             {
@@ -47,22 +54,36 @@ public class TurnOrder : MonoBehaviour
 
             if(changeTurn == true)
         {
-            
+
             i += 1;
-            
-            if (speed[i].CompareTag("Player"))
+            if (i > speed.Count)
             {
-                speed[i].GetComponent<Health>().Playerturn();
+                startOfTurn = true;
+                changeTurn = false;
+            }
+            if (speed[i].CompareTag("Player"))
+                {
+                    speed[i].GetComponent<Health>().myturn = true;
+
+                }
+                if (speed[i].CompareTag("Enemy"))
+                {
+                    speed[i].GetComponent<Health>().myturn = true;
+                    speed[i].GetComponent<enemyAttack>().EnemyTurn();
+                }
                 
             }
-            if(speed[i].CompareTag("Enemy"))
-            {
-                speed[i].GetComponent<enemyAttack>().EnemyTurn();
-            }
-        //    Debug.Log(speed[i] + "");
-            changeTurn = false;
-            
+           
+            if(Input.GetKeyDown("c"))
+        {
+            changeTurn = true;
         }
+            if(Input.GetKeyDown("s"))
+        {
+            startOfTurn = true;
+        }
+        //    Debug.Log(speed[i] + "");
+        
         
     }
 }

@@ -16,10 +16,14 @@ public class Card : MonoBehaviour
     private float startYPos;
 
     private bool isDragging = false;
+    public bool Splash;
+    public bool Single;
+    public bool Dot;
+    public bool DelayedHeal;
 
     CardSpawner Count;
 
-
+    GameObject[] enemies = new GameObject[3];
 
     private void Start()
     {
@@ -29,16 +33,42 @@ public class Card : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-       // Debug.Log("HELP");
-        if (other.gameObject.tag == "Enemy" && damage > 0)
+        // Debug.Log("HELP");
+        if (other.gameObject.tag == "Enemy" && damage > 0 && Single)
         {
+            other.GetComponent<Collider>().GetComponent<Health>().hurt = true;
             other.GetComponent<Collider>().GetComponent<Health>().EnemyTakeDamage(damage);
             Count.counter += 1;
             Destroy(gameObject);
         }
-        if (other.gameObject.tag == "Player" && Heal > 0)
+        if (other.gameObject.tag == "Enemy" && damage > 0 && Splash)
         {
+            for (int i = 0; i < enemies.Length; i++)
+            {
+                enemies[i].GetComponent<Health>().Splash = true;
+                enemies[i].GetComponent<Health>().SplashDamage(damage);
+            }
+            Count.counter += 1;
+            Destroy(gameObject);
+        }
+        if (other.gameObject.tag == "Enemy" && damage > 0 && Dot)
+        {
+            other.GetComponent<Collider>().GetComponent<Health>().Dot = true;
+            other.GetComponent<Collider>().GetComponent<Health>().DamageOverTurn(damage);
+            Count.counter += 1;
+            Destroy(gameObject);
+        }
+        if (other.gameObject.tag == "Player" && Heal > 0 && Single)
+        {
+            other.GetComponent<Collider>().GetComponent<Health>().restore = true;
             other.GetComponent<Collider>().GetComponent<Health>().PlayerHeal(Heal);
+            Count.counter += 1;
+            Destroy(gameObject);
+        }
+        if (other.gameObject.tag == "Player" && Heal > 0 && DelayedHeal)
+        {
+            other.GetComponent<Collider>().GetComponent<Health>().DelayedHeal = true;
+            other.GetComponent<Collider>().GetComponent<Health>().PreparedHeal(Heal);
             Count.counter += 1;
             Destroy(gameObject);
         }
@@ -46,6 +76,7 @@ public class Card : MonoBehaviour
 
     void Update()
     {
+        enemies = GameObject.FindGameObjectsWithTag("Enemy");
         if (isDragging)
         {
             DragObject();

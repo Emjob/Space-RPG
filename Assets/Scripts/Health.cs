@@ -5,30 +5,41 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     public float currentHealth;
+    public float healOnTurn;
+    public float damageOnTurn;
+
+    public int damageOverTurn;
+    public int DotTurns;
+    public int healOnDelay;
+    public int splash;
+    private int delay;
 
     public bool isPlayerDead;
     public bool endTurn;
     public bool isEnemyDead;
+    public bool hurt;
+    public bool restore;
+    public bool myturn;
+    public bool Dot;
+    public bool DelayedHeal;
+    public bool Splash;
+
+    Collider Collider;
     
 
     GameObject[] enemies = new GameObject[3];
 
     public HealthBar healthBar;
     public Stats baseStats;
-    CardSpawner draw;
-    TurnOrder change;
-    enemyAttack turn;
     private void Start()
     {
+        Collider = GetComponent<Collider>();
+
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
 
         currentHealth = baseStats.maxHealth;
-        draw = GameObject.Find("Holder").GetComponent<CardSpawner>();
-        change = GameObject.Find("TurnChanger").GetComponent<TurnOrder>();
-        for (int i = 0; i < enemies.Length; i++)
-        {
-            turn = enemies[i].GetComponent<enemyAttack>();
-        }
+
+       
 
 
     }
@@ -42,33 +53,32 @@ public class Health : MonoBehaviour
             isPlayerDead = true;
         }
         healthBar.UpdateHealthBar();
- 
     }
     public void PlayerHeal(int Heal)
     {
-        if (currentHealth < baseStats.maxHealth)
-        {
-            currentHealth = currentHealth + Heal;
-            healthBar.UpdateHealthBar();
-        }
+            healOnTurn = Heal; 
     }
-
-    void HealthReset()
+    public void PreparedHeal(int Heal)
     {
-
+        healOnDelay = Heal;
     }
+
 
     public void EnemyTakeDamage(int damage)
     {
-        currentHealth = currentHealth - damage;
 
-        if (currentHealth <= 0 && isEnemyDead == false)
-        {
-            Destroy(gameObject);
-            isEnemyDead = true;
+            damageOnTurn = damage;  
+    }
+    public void SplashDamage(int damage)
+    {
+        splash += damage;
+    }
 
-        }
-        healthBar.UpdateHealthBar();
+    public void DamageOverTurn(int damage)
+    {
+        
+            damageOverTurn = damage;
+       
     }
     public void EnemyHeal(int Heal)
     {
@@ -76,28 +86,104 @@ public class Health : MonoBehaviour
         {
             currentHealth = currentHealth + Heal;
             healthBar.UpdateHealthBar();
-            GetComponent<Renderer>().material.color = new Color(255, 0, 211);
+            
         }
     }
 
     private void Update()
     {
-       
-        if (endTurn == true)
+
+        
+        if(myturn == true)
         {
-            change.changeTurn = true;
+            Collider.enabled = true;
+            if(currentHealth > baseStats.maxHealth)
+            {
+                currentHealth = baseStats.maxHealth;
+            }
+            if (restore == true && myturn == true)
+            {
+                if (currentHealth < baseStats.maxHealth)
+                {
+                    currentHealth = currentHealth + healOnTurn;
+                    healthBar.UpdateHealthBar();
+                }
+                healOnTurn = 0;
+                restore = false; 
+            }
+            if (DelayedHeal == true && myturn == true)
+            {
+                if(delay > 1)
+                {
+                    delay = 0;
+                }
+                if (currentHealth < baseStats.maxHealth && delay == 1)
+                {
+                    currentHealth = currentHealth + healOnDelay;
+                    healthBar.UpdateHealthBar();
+                    healOnDelay = 0;
+                    DelayedHeal = false;
+                }
+                delay += 1;
+                
+            }
+            if (hurt == true && myturn == true)
+            {
+                currentHealth = currentHealth - damageOnTurn;
+                if (currentHealth <= 0 && isEnemyDead == false)
+                {
+                    Destroy(gameObject);
+                    isEnemyDead = true;
+
+                }
+                healthBar.UpdateHealthBar();
+                damageOnTurn = 0;
+                hurt = false;
+            }
+            if (Splash == true && myturn == true)
+            {
+                currentHealth = currentHealth - splash;
+                if (currentHealth <= 0 && isEnemyDead == false)
+                {
+                    Destroy(gameObject);
+                    isEnemyDead = true;
+
+                }
+                healthBar.UpdateHealthBar();
+                splash = 0;
+                Splash = false;
+            }
+            if (Dot == true && myturn == true)
+            {
+                currentHealth = currentHealth - damageOverTurn;
+                if (currentHealth <= 0 && isEnemyDead == false)
+                {
+                    Destroy(gameObject);
+                    isEnemyDead = true;
+
+                }
+                healthBar.UpdateHealthBar();
+                int turnCount = 0;
+                turnCount += 1;
+                if(turnCount == DotTurns)
+                {
+                    damageOverTurn = 0;
+                    Dot = false;
+                }
+                
+            }
+            myturn = false;
+        }
+
+      
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "Card")
+        {
+            Collider.enabled = false;
         }
     }
 
-    public void Playerturn()
-    {
-        draw.con = 0;
-        draw.Draw();
-        
-        if(draw.counter == 1)
-        {
-            change.changeTurn = true;
-        }
-    }
-   
 }

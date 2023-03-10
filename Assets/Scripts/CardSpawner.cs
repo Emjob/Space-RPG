@@ -6,8 +6,6 @@ public class CardSpawner : MonoBehaviour
 {
 
     GameObject[] spawnPoint;
-    public GameObject damageCard;
-    public GameObject healthCard;
     public GameObject[] Deck;
     public GameObject[] activeDeck = new GameObject[15];
     GameObject[] RemainingCards;
@@ -16,12 +14,13 @@ public class CardSpawner : MonoBehaviour
     public Stats Health;
     TurnOrder change;
 
-    public bool myTurn;
-   
+    public bool spawn;
+
 
     public int counter;
     public int con;
     public int shuffle;
+    private int j;
     
     // Start is called before the first frame update
     void Start()
@@ -29,9 +28,9 @@ public class CardSpawner : MonoBehaviour
 
         change = GameObject.Find("TurnChanger").GetComponent<TurnOrder>();
         spawnPoint = GameObject.FindGameObjectsWithTag("SpawnPoint");
-        for (int i = 0; i < activeDeck.Length; i++)
+        for (int i = 0; i < 15; i++)
         {
-            activeDeck[i] = Deck[Random.Range(0, 2)];
+            activeDeck[i] = Deck[Random.Range(0, Deck.Length)];
         }
 
     }
@@ -42,7 +41,7 @@ public class CardSpawner : MonoBehaviour
        
 
         RemainingCards = GameObject.FindGameObjectsWithTag("Card");
-        if (counter == 1)
+        if (counter == 3)
         {
             for(int i = 0; i < RemainingCards.Length; i++)
             {
@@ -58,16 +57,30 @@ public class CardSpawner : MonoBehaviour
        con = 0;
         if (con < 5)
         {
+            if (j >= activeDeck.Length)
+            {
+                j = 0;
+                for (int z = 0; z < 15; z++)
+                {
+                    activeDeck[z] = Deck[Random.Range(0, Deck.Length)];
+                }
+            }
             for (int i = 0; i < spawnPoint.Length; i++)
             {
-                Instantiate(Deck[Random.Range(0, Deck.Length)], spawnPoint[i].transform.position, Quaternion.identity);
-                con += 1;
+                
+                Instantiate(activeDeck[j], spawnPoint[i].transform.position, Quaternion.identity);
+                //  activeDeck.RemoveAt(i);
+                    j += 1;
+                    con += 1;
+                
             }
         }
+            
+    }
        // if(counter == 1)
        // {
        //     change.changeTurn = true;
        // }
         
-    }
 }
+

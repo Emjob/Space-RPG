@@ -514,7 +514,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61ba76116fcf1fc41a43246f0f73e871, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 20
+  maxHealth: 600
   Speed: 10
   Heal: 10
   Damage: 10
@@ -531,9 +531,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHealth: 0
+  healOnTurn: 0
+  damageOnTurn: 0
+  damageOverTurn: 0
+  DotTurns: 0
+  healOnDelay: 0
+  splash: 0
   isPlayerDead: 0
   endTurn: 0
   isEnemyDead: 0
+  hurt: 0
+  restore: 0
+  myturn: 0
+  Dot: 0
+  DelayedHeal: 0
+  Splash: 0
   healthBar: {fileID: 2024117636}
   baseStats: {fileID: 491594282}
 --- !u!114 &491594284
@@ -549,7 +561,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
-  Heal: 10
+  Heal: 0
   players: []
 --- !u!1 &507925614
 GameObject:
@@ -812,11 +824,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42c8e9f869b296d4cbb6b464746c071a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageCard: {fileID: 2993684642457954185, guid: 03516791c52bf124783a0635220990b3, type: 3}
-  healthCard: {fileID: 1188686235820266820, guid: f8cfd0cf7a6d0eb469faad7aae4cfce9, type: 3}
   Deck:
-  - {fileID: 2993684642457954185, guid: 03516791c52bf124783a0635220990b3, type: 3}
-  - {fileID: 1188686235820266820, guid: f8cfd0cf7a6d0eb469faad7aae4cfce9, type: 3}
+  - {fileID: 933953011345463230, guid: 3abb1caf1933cdf4f9b3225037840b40, type: 3}
+  - {fileID: 7106725449112676844, guid: 668614c75b9c92b4aa5b93c61f26086b, type: 3}
+  - {fileID: 5566720598750206979, guid: c03a6eec8a4bb7b4d9e781461496edf7, type: 3}
+  - {fileID: 7577566384172425482, guid: ecdd122fb264e00418e6263521d48ffe, type: 3}
+  - {fileID: 7327861348165752701, guid: 6b014f4b4e1cafd43a7309f86490101e, type: 3}
   activeDeck:
   - {fileID: 0}
   - {fileID: 0}
@@ -834,7 +847,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   Health: {fileID: 1298242123}
-  myTurn: 0
+  spawn: 0
   counter: 0
   con: 0
   shuffle: 0
@@ -931,6 +944,168 @@ MonoBehaviour:
   healthBarImage: {fileID: 1917046890}
   cHealth: {fileID: 1155592645}
   Health: {fileID: 1155592644}
+--- !u!1 &736238828
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 736238835}
+  - component: {fileID: 736238834}
+  - component: {fileID: 736238833}
+  - component: {fileID: 736238832}
+  - component: {fileID: 736238831}
+  - component: {fileID: 736238830}
+  - component: {fileID: 736238829}
+  m_Layer: 0
+  m_Name: Player (2)
+  m_TagString: Player
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &736238829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 736238828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61ba76116fcf1fc41a43246f0f73e871, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 200
+  Speed: 2
+  Heal: 10
+  Damage: 10
+--- !u!54 &736238830
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 736238828}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &736238831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 736238828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af3596f67a825fb4cb0626c94e3cf2d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 20
+  healOnTurn: 0
+  damageOnTurn: 0
+  damageOverTurn: 0
+  DotTurns: 0
+  healOnDelay: 0
+  splash: 0
+  isPlayerDead: 0
+  endTurn: 0
+  isEnemyDead: 0
+  hurt: 0
+  restore: 0
+  myturn: 0
+  Dot: 0
+  DelayedHeal: 0
+  Splash: 0
+  healthBar: {fileID: 415162222}
+  baseStats: {fileID: 736238829}
+--- !u!65 &736238832
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 736238828}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &736238833
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 736238828}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: b1ede3b245c9aed46b3ec89b4196d04a, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &736238834
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 736238828}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &736238835
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 736238828}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.03, y: 0.5, z: -17.45}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &953718361
 GameObject:
   m_ObjectHideFlags: 0
@@ -1137,7 +1312,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
-  Heal: 10
+  Heal: 0
   players: []
 --- !u!114 &1155592644
 MonoBehaviour:
@@ -1151,8 +1326,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61ba76116fcf1fc41a43246f0f73e871, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 20
-  Speed: 30
+  maxHealth: 600
+  Speed: 50
   Heal: 10
   Damage: 10
 --- !u!114 &1155592645
@@ -1168,9 +1343,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHealth: 0
+  healOnTurn: 0
+  damageOnTurn: 0
+  damageOverTurn: 0
+  DotTurns: 0
+  healOnDelay: 0
+  splash: 0
   isPlayerDead: 0
   endTurn: 0
   isEnemyDead: 0
+  hurt: 0
+  restore: 0
+  myturn: 0
+  Dot: 0
+  DelayedHeal: 0
+  Splash: 0
   healthBar: {fileID: 691881399}
   baseStats: {fileID: 1155592644}
 --- !u!1 &1274932341
@@ -1270,9 +1457,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHealth: 20
+  healOnTurn: 0
+  damageOnTurn: 0
+  damageOverTurn: 0
+  DotTurns: 0
+  healOnDelay: 0
+  splash: 0
   isPlayerDead: 0
   endTurn: 0
   isEnemyDead: 0
+  hurt: 0
+  restore: 0
+  myturn: 0
+  Dot: 0
+  DelayedHeal: 0
+  Splash: 0
   healthBar: {fileID: 293929464}
   baseStats: {fileID: 1298242123}
 --- !u!65 &1298242118
@@ -1381,7 +1580,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61ba76116fcf1fc41a43246f0f73e871, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 35
+  maxHealth: 200
   Speed: 70
   Heal: 10
   Damage: 10
@@ -1562,7 +1761,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61ba76116fcf1fc41a43246f0f73e871, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 20
+  maxHealth: 600
   Speed: 20
   Heal: 10
   Damage: 10
@@ -1579,9 +1778,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHealth: 0
+  healOnTurn: 0
+  damageOnTurn: 0
+  damageOverTurn: 0
+  DotTurns: 0
+  healOnDelay: 0
+  splash: 0
   isPlayerDead: 0
   endTurn: 0
   isEnemyDead: 0
+  hurt: 0
+  restore: 0
+  myturn: 0
+  Dot: 0
+  DelayedHeal: 0
+  Splash: 0
   healthBar: {fileID: 2035568192}
   baseStats: {fileID: 1427379979}
 --- !u!114 &1427379981
@@ -1919,9 +2130,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHealth: 20
+  healOnTurn: 0
+  damageOnTurn: 0
+  damageOverTurn: 0
+  DotTurns: 0
+  healOnDelay: 0
+  splash: 0
   isPlayerDead: 0
   endTurn: 0
   isEnemyDead: 0
+  hurt: 0
+  restore: 0
+  myturn: 0
+  Dot: 0
+  DelayedHeal: 0
+  Splash: 0
   healthBar: {fileID: 415162222}
   baseStats: {fileID: 1987395567}
 --- !u!65 &1987395563
@@ -2014,7 +2237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61ba76116fcf1fc41a43246f0f73e871, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 20
+  maxHealth: 200
   Speed: 1
   Heal: 10
   Damage: 10
