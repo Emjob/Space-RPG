@@ -1,0 +1,23 @@
+This game uses these sounds from freesound:
+"Whoosh" by qubodup (https://freesound.org/s/60013/) licensed under CC0 1.0
+"Melee Combat Whoosh" by EminYILDIRIM (https://freesound.org/s/539172/) licensed under CC BY 4.0
+"Bamboo Swing, A3.wav" by InspectorJ (https://freesound.org/s/394416/) licensed under CC BY 4.0
+"MetalClang1_Loud_bip.wav" by passAirmangrace (https://freesound.org/s/340915/) licensed under CC BY 3.0
+"Sword Hit" by qubodup (https://freesound.org/s/442769/) licensed under CC0 1.0
+"20061030.car.idling.bin.flac" by dobroide (https://freesound.org/s/24638/) licensed under CC BY 4.0
+"what do robots dream about?.aif" by Tomlija (https://freesound.org/s/110108/) licensed under CC BY 3.0
+"Door slam - Gun shot.mp3" by coolguy244e (https://freesound.org/s/266915/) licensed under CC0 1.0
+"Gun shot" by schots (https://freesound.org/s/382735/) licensed under CC0 1.0
+"Injury.wav" by LorenzoTheGreat (https://freesound.org/s/417793/) licensed under CC BY 3.0
+"Card shuffling.mp3" by SomeoneCool15 (https://freesound.org/s/423767/) licensed under CC0 1.0
+"POWER09.WAV" by mad-monkey (https://freesound.org/s/66694/) licensed under CC0 1.0
+"Power08.WAV" by mad-monkey (https://freesound.org/s/66694/) licensed under CC0 1.0
+"Ping.wav" by DrMrSir (https://freesound.org/s/529559/) licensed under CC BY 3.0
+"whoosh motron very low.wav" by melissapons (https://freesound.org/s/171588/) licensed under CC BY 3.0
+"Beep confirmation OK" by SamsterBirdies (https://freesound.org/s/581603/) licensed under CC0 1.0
+"Footsteps_Metal.wav" by jaredi (https://freesound.org/s/215308/) licensed under CC BY 3.0
+"Running Down Metal Steps.wav" by danhelbling (https://freesound.org/s/272391/) licensed under CC0 1.0
+"" by  () licensed under CC
+"" by  () licensed under CC
+"" by  () licensed under CC
+
