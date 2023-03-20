@@ -333,6 +333,37 @@ MonoBehaviour:
       enableFptlForForwardOpaque: 0
       enableBigTilePrepass: 0
       isFptlEnabled: 0
+--- !u!1 &963927884
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 963927885}
+  m_Layer: 0
+  m_Name: SlashVFX_Kailye
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &963927885
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963927884}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.06139131, y: 0.78217864, z: 0.011816323}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1906839597
 GameObject:
   m_ObjectHideFlags: 0
@@ -563,7 +594,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 190081514720577262, guid: 9226ae1d90d37594f8dbfac5806764f6, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 190081514720577263, guid: 9226ae1d90d37594f8dbfac5806764f6, type: 3}
       propertyPath: m_RootOrder
@@ -611,7 +642,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 190081514876035589, guid: 9226ae1d90d37594f8dbfac5806764f6, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9226ae1d90d37594f8dbfac5806764f6, type: 3}
@@ -799,6 +830,14 @@ PrefabInstance:
     - target: {fileID: 4888522078330574623, guid: 3ea21d3767c1b4b44832caaa8d5ef38e, type: 3}
       propertyPath: m_Name
       value: WaveVFXWIP
+      objectReference: {fileID: 0}
+    - target: {fileID: 4888522078330574623, guid: 3ea21d3767c1b4b44832caaa8d5ef38e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4888522079492770930, guid: 3ea21d3767c1b4b44832caaa8d5ef38e, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ea21d3767c1b4b44832caaa8d5ef38e, type: 3}
