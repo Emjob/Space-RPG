@@ -128,7 +128,7 @@ public class RandomSound : MonoBehaviour
 
     public void LoopSwapSecond()
     {
-        if (MultiSourceB.loop = true)
+        if (MultiSourceB.loop == true)
         {
             MultiSourceB.loop = false;
         }

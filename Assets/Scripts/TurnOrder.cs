@@ -30,6 +30,7 @@ public class TurnOrder : MonoBehaviour
 
         if (startOfTurn == true || i > speed.Count)
             {
+            hand.con = 0;
             hand.Draw();
             speed.Clear();
             for (int i = 0; i < enemies.Length; i++)

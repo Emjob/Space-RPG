@@ -21,7 +21,7 @@ public class CardSpawner : MonoBehaviour
     public int counter;
     public int con;
     public int shuffle;
-    private int j;
+    public int j;
     
     // Start is called before the first frame update
     void Start()
@@ -55,16 +55,17 @@ public class CardSpawner : MonoBehaviour
 
     public void Draw()
     {
-       con = 0;
-        if (con < 5)
+       
+        if (con <= 5)
         {
             if (j >= activeDeck.Length)
             {
-                j = 0;
+                
                 for (int z = 0; z < 15; z++)
                 {
                     activeDeck[z] = Deck[Random.Range(0, Deck.Length)];
                 }
+                j = 0;
             }
             for (int i = 0; i < spawnPoint.Length; i++)
             {
