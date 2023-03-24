@@ -38,7 +38,7 @@ public class RandomSound : MonoBehaviour
         CheckFolder();
         MultiSourceB.clip = ClipsToPlay[Random.Range(0, (ClipsToPlay.Count))];
         MultiSourceB.Play();
-        Debug.Log("Now playing: " + MultiSourceB.clip.name);
+        Debug.Log("Now playing, closely behind: " + MultiSourceB.clip.name);
     }
 
     public void RNG2Sounds()
@@ -142,6 +142,7 @@ public class RandomSound : MonoBehaviour
     public void Silence()
     {
         RNGSource.Stop();
+        MultiSourceB.Stop();
     }
 
 
