@@ -28,8 +28,8 @@ public class TurnOrder : MonoBehaviour
         players = GameObject.FindGameObjectsWithTag("Player");
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
 
-        if (startOfTurn == true || i > speed.Count)
-            {
+        if (startOfTurn == true || i >= speed.Count)
+        {
             hand.con = 0;
             hand.Draw();
             speed.Clear();
@@ -42,17 +42,17 @@ public class TurnOrder : MonoBehaviour
                 speed.Add(players[i]);
             }
             i = -1;
-                speed.Sort(delegate (GameObject a, GameObject b)
-                {
-                    return (a.GetComponent<Stats>().Speed).CompareTo(b.GetComponent<Stats>().Speed);
-                });
-            
+            speed.Sort(delegate (GameObject a, GameObject b)
+            {
+                return (a.GetComponent<Stats>().Speed).CompareTo(b.GetComponent<Stats>().Speed);
+            });
+
             speed.Reverse();
             startOfTurn = false;
 
         }
 
-            if(changeTurn == true)
+        if (changeTurn == true)
         {
 
             i += 1;
@@ -62,28 +62,28 @@ public class TurnOrder : MonoBehaviour
                 changeTurn = false;
             }
             if (speed[i].CompareTag("Player"))
-                {
-                    speed[i].GetComponent<Health>().myturn = true;
+            {
+                speed[i].GetComponent<Health>().myturn = true;
 
-                }
-                if (speed[i].CompareTag("Enemy"))
-                {
-                    speed[i].GetComponent<Health>().myturn = true;
-                    speed[i].GetComponent<enemyAttack>().EnemyTurn();
-                }
-                
             }
-           
-            if(Input.GetKeyDown("c"))
+            if (speed[i].CompareTag("Enemy"))
+            {
+                speed[i].GetComponent<Health>().myturn = true;
+                speed[i].GetComponent<enemyAttack>().EnemyTurn();
+            }
+
+        }
+
+        if (Input.GetKeyDown("c"))
         {
             changeTurn = true;
         }
-            if(Input.GetKeyDown("s"))
+        if (Input.GetKeyDown("s"))
         {
             startOfTurn = true;
         }
         //    Debug.Log(speed[i] + "");
-        
-        
+
+
     }
 }

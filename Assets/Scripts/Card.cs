@@ -101,7 +101,7 @@ public class Card : MonoBehaviour
         mousePos = myCam.ScreenToWorldPoint(mousePos);
 
         startXPos = mousePos.x - transform.localPosition.x;
-        startYPos = mousePos.z - transform.localPosition.z;
+        startYPos = mousePos.y - transform.localPosition.y;
 
         isDragging = true;
     }
@@ -116,9 +116,7 @@ public class Card : MonoBehaviour
     {
         Vector3 mousePos = Input.mousePosition;
 
-
-
         mousePos = myCam.ScreenToWorldPoint(mousePos);
-        transform.localPosition = new Vector3(mousePos.x - startXPos, 0, mousePos.z - startYPos);
+        transform.localPosition = new Vector3(mousePos.x - startXPos, mousePos.y - startYPos, -162.8474f);
     }
 }

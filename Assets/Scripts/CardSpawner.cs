@@ -51,6 +51,7 @@ public class CardSpawner : MonoBehaviour
             change.changeTurn = true;
             counter = 0;
         }
+       
     }
 
     public void Draw()
@@ -60,7 +61,7 @@ public class CardSpawner : MonoBehaviour
         {
             if (j >= activeDeck.Length)
             {
-                
+
                 for (int z = 0; z < 15; z++)
                 {
                     activeDeck[z] = Deck[Random.Range(0, Deck.Length)];
@@ -74,10 +75,8 @@ public class CardSpawner : MonoBehaviour
                 //  activeDeck.RemoveAt(i);
                     j += 1;
                     con += 1;
-                
             }
-        }
-            
+        }           
     }
        // if(counter == 1)
        // {

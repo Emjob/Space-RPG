@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7327861348165752701}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.51834905, y: 13.371546, z: -24.338894}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -113,7 +113,9 @@ MonoBehaviour:
   Heal: 0
   damage: 10
   speed: 0
+  shield: 0
   myCam: {fileID: 0}
   Splash: 1
   Single: 0
   Dot: 0
+  DelayedHeal: 0
