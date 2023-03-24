@@ -9,7 +9,6 @@ public class RandomSound : MonoBehaviour
     private AudioSource MultiSourceB;
     public int WhichFolder;
     public List<AudioClip> ClipsToPlay;
-    private AudioClip[] ClipsInFolder;
     public AudioClip[] MultiClipA, MultiClipB;
     //public AudioClip prevClip;
     
@@ -39,6 +38,7 @@ public class RandomSound : MonoBehaviour
         CheckFolder();
         MultiSourceB.clip = ClipsToPlay[Random.Range(0, (ClipsToPlay.Count))];
         MultiSourceB.Play();
+        Debug.Log("Now playing: " + MultiSourceB.clip.name);
     }
 
     public void RNG2Sounds()
@@ -47,7 +47,9 @@ public class RandomSound : MonoBehaviour
         RNGSource.clip = MultiClipA[Random.Range(0, MultiClipA.Length)];
         MultiSourceB.clip = MultiClipB[Random.Range(0, MultiClipB.Length)];
         RNGSource.Play();
+        Debug.Log("Now playing: " + RNGSource.clip.name);
         MultiSourceB.PlayDelayed(RNGSource.clip.length);
+        Debug.Log("and also: " + MultiSourceB.clip.name);
         //prevClip = RNGSource.clip;
     }
 
@@ -110,14 +112,31 @@ public class RandomSound : MonoBehaviour
                     ClipsToPlay.Add(Clips);
                 }
                 break;
-            default:
+            case 10: //WHIRR
+                foreach (AudioClip Clips in Resources.LoadAll<AudioClip>("Sounds/Sound Effects/whirr"))
+                {
+                    ClipsToPlay.Add(Clips);
+                }
+                break;
+            case 11: //HEAL
+                foreach (AudioClip Clips in Resources.LoadAll<AudioClip>("Sounds/Sound Effects/heal"))
+                {
+                    ClipsToPlay.Add(Clips);
+                }
+                break;
+            case 12: //CLANG1
+                ClipsToPlay.Add(Resources.Load<AudioClip>("Sounds/Sound Effects/clang/metalclang-01"));
+                break;
+            case 13: //CLANG2
+                ClipsToPlay.Add(Resources.Load<AudioClip>("Sounds/Sound Effects/clang/metalclang-02"));
+                break;
+            default://WEIRD SOUND YOU SHOULDN'T BE ABLE TO HEAR
                 foreach (AudioClip Clips in Resources.LoadAll<AudioClip>("Sounds/Sound Effects/youshouldnthearthis"))
                 {
                     ClipsToPlay.Add(Clips);
                 }
                 break;
         }
-        
     }
 
     public void Silence()
@@ -128,15 +147,17 @@ public class RandomSound : MonoBehaviour
 
     public void LoopSwapSecond()
     {
-        if (MultiSourceB.loop == true)
-        {
-            MultiSourceB.loop = false;
-        }
-        else
-        {
-            MultiSourceB.loop = true;
-        }
+        MultiSourceB.loop = MultiSourceB.loop != true;
     }
+
+  /*  public void FadeOut()
+    {
+        while (RNGSource.volume > 0)
+        {
+            RNGSource.volume -= 0.001f; 
+        }
+        
+    }*/
 }
     
 
