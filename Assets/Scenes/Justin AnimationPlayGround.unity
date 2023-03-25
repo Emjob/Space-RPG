@@ -1170,7 +1170,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4655990702605468025, guid: 33f7ff62695f3934a8f58c20e14784fd, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4655990702605468030, guid: 33f7ff62695f3934a8f58c20e14784fd, type: 3}
       propertyPath: m_RootOrder
@@ -1740,7 +1740,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8961453852854325732, guid: 4243371c3269f6949abfbdd4c877690f, type: 3}
       propertyPath: m_ConstrainProportionsScale
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8961453852854325733, guid: 4243371c3269f6949abfbdd4c877690f, type: 3}
       propertyPath: m_Name
@@ -1748,7 +1748,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8961453852854325733, guid: 4243371c3269f6949abfbdd4c877690f, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8961453854356345626, guid: 4243371c3269f6949abfbdd4c877690f, type: 3}
       propertyPath: m_Enabled
@@ -1951,7 +1951,7 @@ PrefabInstance:
       objectReference: {fileID: 169837253}
     - target: {fileID: 4568408214876941594, guid: 284fbc763fcff994c822d2e0af498523, type: 3}
       propertyPath: m_ApplyRootMotion
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4568408214876941596, guid: 284fbc763fcff994c822d2e0af498523, type: 3}
       propertyPath: m_Name
