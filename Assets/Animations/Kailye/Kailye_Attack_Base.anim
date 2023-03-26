@@ -3217,27 +3217,9 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.36666667
-        value: 5
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 0.38333333
-        value: 8
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
         time: 12.616667
         value: 1
-        inSlope: -0.5722071
+        inSlope: -0.32388663
         outSlope: 2.6966288
         tangentMode: 69
         weightedMode: 0
@@ -13096,27 +13078,9 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.36666667
-        value: 5
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 0.38333333
-        value: 8
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
         time: 12.616667
         value: 1
-        inSlope: -0.5722071
+        inSlope: -0.32388663
         outSlope: 2.6966288
         tangentMode: 69
         weightedMode: 0
@@ -14470,13 +14434,6 @@ AnimationClip:
   m_Events:
   - time: 0.26666668
     functionName: RNGSound
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.4
-    functionName: RNGSoundClose
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

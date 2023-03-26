@@ -8,8 +8,7 @@ public class RandomSound : MonoBehaviour
     private AudioSource RNGSource;
     private AudioSource MultiSourceB;
     public int WhichFolder;
-    public List<AudioClip> ClipsToPlay;
-    public AudioClip[] MultiClipA, MultiClipB;
+    public List<AudioClip> ClipsToPlay, MultiClipB;
     //public AudioClip prevClip;
     
     void Start()
@@ -30,7 +29,7 @@ public class RandomSound : MonoBehaviour
         CheckFolder();
         RNGSource.clip = ClipsToPlay[Random.Range(0, (ClipsToPlay.Count))];
         RNGSource.Play();
-        Debug.Log("Now playing: " + RNGSource.clip.name);
+        Debug.Log(gameObject.name + " is now playing: " + RNGSource.clip.name);
     }
     
     public void RNGSoundClose() //USE THIS IF PLAYING TWO DIFFERENT SOUND EFFECTS CLOSE TO ONE ANOTHER
@@ -38,14 +37,14 @@ public class RandomSound : MonoBehaviour
         CheckFolder();
         MultiSourceB.clip = ClipsToPlay[Random.Range(0, (ClipsToPlay.Count))];
         MultiSourceB.Play();
-        Debug.Log("Now playing, closely behind: " + MultiSourceB.clip.name);
+        Debug.Log(gameObject.name + " is now playing, closely behind: " + MultiSourceB.clip.name);
     }
 
-    public void RNG2Sounds()
+    public void RNGInOrder()
     {
         CheckFolder();
-        RNGSource.clip = MultiClipA[Random.Range(0, MultiClipA.Length)];
-        MultiSourceB.clip = MultiClipB[Random.Range(0, MultiClipB.Length)];
+        RNGSource.clip = ClipsToPlay[Random.Range(0, ClipsToPlay.Count)];
+        MultiSourceB.clip = MultiClipB[Random.Range(0, MultiClipB.Count)];
         RNGSource.Play();
         Debug.Log("Now playing: " + RNGSource.clip.name);
         MultiSourceB.PlayDelayed(RNGSource.clip.length);
@@ -129,6 +128,24 @@ public class RandomSound : MonoBehaviour
                 break;
             case 13: //CLANG2
                 ClipsToPlay.Add(Resources.Load<AudioClip>("Sounds/Sound Effects/clang/metalclang-02"));
+                break;
+            case 14: //MAGIC LOOP
+                foreach (AudioClip Clips in Resources.LoadAll<AudioClip>("Sounds/Sound Effects/magic/b"))
+                {
+                    ClipsToPlay.Add(Clips);
+                }
+                break;
+            case 15: //MAGIC SOLO
+                foreach (AudioClip Clips in Resources.LoadAll<AudioClip>("Sounds/Sound Effects/magic/c"))
+                {
+                    ClipsToPlay.Add(Clips);
+                }
+                break;
+            case 16: //MAGIC END
+                foreach (AudioClip Clips in Resources.LoadAll<AudioClip>("Sounds/Sound Effects/magic/d"))
+                {
+                    ClipsToPlay.Add(Clips);
+                }
                 break;
             default://WEIRD SOUND YOU SHOULDN'T BE ABLE TO HEAR
                 foreach (AudioClip Clips in Resources.LoadAll<AudioClip>("Sounds/Sound Effects/youshouldnthearthis"))
