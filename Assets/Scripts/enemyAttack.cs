@@ -10,6 +10,8 @@ public class enemyAttack : MonoBehaviour
     public int damage;
     public int Heal;
 
+    Animator Anim;
+
     TurnOrder change;
 
    public GameObject[] players;
@@ -18,6 +20,7 @@ public class enemyAttack : MonoBehaviour
     {
         change = GameObject.Find("TurnChanger").GetComponent<TurnOrder>();
         players = GameObject.FindGameObjectsWithTag("Player");
+        Anim = gameObject.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -27,18 +30,21 @@ public class enemyAttack : MonoBehaviour
         int n = Random.Range(0, 2);
             if(n == 0)
             {
+            Anim.SetBool("isAttacking1", true);
                 players[Random.Range(0,2)].GetComponent<Health>().PlayerTakeDamage(damage);
             Debug.Log("Attack");
             GetComponent<Renderer>().material.color = new Color(255, 0, 0);
-
+            Anim.SetBool("isAttacking1", false);
 
         }
             if(n == 1)
             {
-                GetComponent<Health>().EnemyHeal(Heal);
+            Anim.SetBool("isHeal", true);
+            GetComponent<Health>().EnemyHeal(Heal);
             GetComponent<Renderer>().material.color = new Color(255, 0, 211);
             Debug.Log("Heal");
-       
+            Anim.SetBool("isHeal", false);
+
         }
         
 

@@ -28,6 +28,7 @@ public class Health : MonoBehaviour
     public bool getShield;
 
     Collider Collider;
+    Animator Anim;
     
 
     GameObject[] enemies = new GameObject[3];
@@ -44,6 +45,7 @@ public class Health : MonoBehaviour
 
         DotTurns = 2;
 
+        Anim = gameObject.GetComponent<Animator>();
 
     }
     public void PlayerTakeDamage(int damage)
@@ -99,7 +101,14 @@ public class Health : MonoBehaviour
 
     private void Update()
     {
-        
+        if (currentHealth <= 0 && isEnemyDead == false)
+        {
+            //   Destroy(gameObject);
+            Anim.SetBool("isDead", true);
+            isEnemyDead = true;
+
+        }
+
 
         if (myturn == true)
         {
@@ -121,6 +130,7 @@ public class Health : MonoBehaviour
             }
             if (restore == true && myturn == true)
             {
+                
                 if (currentHealth < baseStats.maxHealth)
                 {
                     currentHealth = currentHealth + healOnTurn;
@@ -147,45 +157,33 @@ public class Health : MonoBehaviour
             }
             if (hurt == true && myturn == true)
             {
+                Anim.SetBool("isHit", true);
                 currentHealth = currentHealth - damageOnTurn;
-                if (currentHealth <= 0 && isEnemyDead == false)
-                {
-                    Destroy(gameObject);
-                    isEnemyDead = true;
-
-                }
+                
                 healthBar.UpdateHealthBar();
                 damageOnTurn = 0;
+                Anim.SetBool("isHit", false);
                 hurt = false;
             }
             if (Splash == true && myturn == true)
             {
+                Anim.SetBool("isHit", true);
                 currentHealth = currentHealth - splash;
-                if (currentHealth <= 0 && isEnemyDead == false)
-                {
-                    Destroy(gameObject);
-                    isEnemyDead = true;
-
-                }
+                
                 healthBar.UpdateHealthBar();
                 splash = 0;
+                Anim.SetBool("isHit", false);
                 Splash = false;
             }
             if (Dot == true && myturn == true)
             {
-                
+                Anim.SetBool("isHit", true);
                 currentHealth = currentHealth - damageOverTurn;
-                if (currentHealth <= 0 && isEnemyDead == false)
-                {
-                    Destroy(gameObject);
-                    isEnemyDead = true;
-
-                }
+                
                 healthBar.UpdateHealthBar();
                 
                 turnCount += 1;
-                
-                
+                Anim.SetBool("isHit", false);
             }
             if (getShield == true && myturn == true)
             {
