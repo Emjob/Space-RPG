@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 261.9017, g: 324.45706, b: 429.4361, a: 1}
+  m_IndirectSpecularColor: {r: 262.3369, g: 325.0498, b: 430.21924, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2072,13 +2072,45 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1430640362, guid: 284fbc763fcff994c822d2e0af498523, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9968419
+      objectReference: {fileID: 0}
+    - target: {fileID: 1430640362, guid: 284fbc763fcff994c822d2e0af498523, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.0794122
+      objectReference: {fileID: 0}
+    - target: {fileID: 1430640362, guid: 284fbc763fcff994c822d2e0af498523, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -9.11
+      objectReference: {fileID: 0}
     - target: {fileID: 4568408214382680687, guid: 284fbc763fcff994c822d2e0af498523, type: 3}
       propertyPath: m_SortingOrder
       value: 46
       objectReference: {fileID: 0}
+    - target: {fileID: 4568408214789343410, guid: 284fbc763fcff994c822d2e0af498523, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -934119891, guid: d15686f160f702d44acb1b263ad69841, type: 3}
+    - target: {fileID: 4568408214789343411, guid: 284fbc763fcff994c822d2e0af498523, type: 3}
+      propertyPath: m_Bounds.m_Center.x
+      value: -0.080492616
+      objectReference: {fileID: 0}
+    - target: {fileID: 4568408214789343411, guid: 284fbc763fcff994c822d2e0af498523, type: 3}
+      propertyPath: m_Bounds.m_Center.y
+      value: -0.048201323
+      objectReference: {fileID: 0}
+    - target: {fileID: 4568408214789343411, guid: 284fbc763fcff994c822d2e0af498523, type: 3}
+      propertyPath: m_Bounds.m_Extent.x
+      value: 1.345084
+      objectReference: {fileID: 0}
+    - target: {fileID: 4568408214789343411, guid: 284fbc763fcff994c822d2e0af498523, type: 3}
+      propertyPath: m_Bounds.m_Extent.y
+      value: 1.1969824
+      objectReference: {fileID: 0}
     - target: {fileID: 4568408214789343411, guid: 284fbc763fcff994c822d2e0af498523, type: 3}
       propertyPath: m_BoneTransforms.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4568408214789343411, guid: 284fbc763fcff994c822d2e0af498523, type: 3}
       propertyPath: m_BoneTransforms.Array.data[0]

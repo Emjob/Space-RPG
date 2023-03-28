@@ -289,6 +289,15 @@ AnimationClip:
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
+        time: 11.666667
+        value: {x: 0, y: 0, z: -9.11}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
         time: 12.616667
         value: {x: 0, y: 0, z: 10.627}
         inSlope: {x: 0, y: 0, z: 0}
@@ -3361,7 +3370,128 @@ AnimationClip:
     path: Kailye_SparkSlash_Effects
     classID: 1
     script: {fileID: 0}
-  m_PPtrCurves: []
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -0.080492616
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.28333333
+        value: -0.080492616
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_Bounds.m_Center.x
+    path: Kampilan_Head
+    classID: 114
+    script: {fileID: 11500000, guid: 57c008f954fe54a8bb972de1018a2cb8, type: 3}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -0.048201323
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.28333333
+        value: -0.048201323
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_Bounds.m_Center.y
+    path: Kampilan_Head
+    classID: 114
+    script: {fileID: 11500000, guid: 57c008f954fe54a8bb972de1018a2cb8, type: 3}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1.345084
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.28333333
+        value: 1.345084
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_Bounds.m_Extent.x
+    path: Kampilan_Head
+    classID: 114
+    script: {fileID: 11500000, guid: 57c008f954fe54a8bb972de1018a2cb8, type: 3}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1.1969824
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.28333333
+        value: 1.1969824
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_Bounds.m_Extent.y
+    path: Kampilan_Head
+    classID: 114
+    script: {fileID: 11500000, guid: 57c008f954fe54a8bb972de1018a2cb8, type: 3}
+  m_PPtrCurves:
+  - curve:
+    - time: 0
+      value: {fileID: -934119891, guid: d15686f160f702d44acb1b263ad69841, type: 3}
+    - time: 0.28333333
+      value: {fileID: 276120255, guid: 47582cc733cea0d48b6311b6645a9862, type: 3}
+    attribute: m_Sprite
+    path: Kampilan_Head
+    classID: 212
+    script: {fileID: 0}
   m_SampleRate: 60
   m_WrapMode: 0
   m_Bounds:
@@ -3720,6 +3850,13 @@ AnimationClip:
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
+      path: 2142462878
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 212
+      customType: 23
+      isPPtrCurve: 1
+    - serializedVersion: 2
       path: 1577596665
       attribute: 1
       script: {fileID: 0}
@@ -3803,7 +3940,37 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
-    pptrCurveMapping: []
+    - serializedVersion: 2
+      path: 2142462878
+      attribute: 642804034
+      script: {fileID: 11500000, guid: 57c008f954fe54a8bb972de1018a2cb8, type: 3}
+      typeID: 114
+      customType: 0
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 2142462878
+      attribute: 1364679124
+      script: {fileID: 11500000, guid: 57c008f954fe54a8bb972de1018a2cb8, type: 3}
+      typeID: 114
+      customType: 0
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 2142462878
+      attribute: 3396860343
+      script: {fileID: 11500000, guid: 57c008f954fe54a8bb972de1018a2cb8, type: 3}
+      typeID: 114
+      customType: 0
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 2142462878
+      attribute: 3178285345
+      script: {fileID: 11500000, guid: 57c008f954fe54a8bb972de1018a2cb8, type: 3}
+      typeID: 114
+      customType: 0
+      isPPtrCurve: 0
+    pptrCurveMapping:
+    - {fileID: -934119891, guid: d15686f160f702d44acb1b263ad69841, type: 3}
+    - {fileID: 276120255, guid: 47582cc733cea0d48b6311b6645a9862, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
@@ -5899,6 +6066,15 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
+        time: 11.666667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
         time: 12.616667
         value: 0
         inSlope: 0
@@ -5955,6 +6131,15 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 6.383333
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 11.666667
         value: 0
         inSlope: 0
         outSlope: 0
@@ -6020,6 +6205,15 @@ AnimationClip:
       - serializedVersion: 3
         time: 6.383333
         value: 10.627
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 11.666667
+        value: -9.11
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -13798,6 +13992,118 @@ AnimationClip:
     path: AttackVFX_Kailye
     classID: 4
     script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -0.080492616
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.28333333
+        value: -0.080492616
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_Bounds.m_Center.x
+    path: Kampilan_Head
+    classID: 114
+    script: {fileID: 11500000, guid: 57c008f954fe54a8bb972de1018a2cb8, type: 3}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -0.048201323
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.28333333
+        value: -0.048201323
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_Bounds.m_Center.y
+    path: Kampilan_Head
+    classID: 114
+    script: {fileID: 11500000, guid: 57c008f954fe54a8bb972de1018a2cb8, type: 3}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1.345084
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.28333333
+        value: 1.345084
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_Bounds.m_Extent.x
+    path: Kampilan_Head
+    classID: 114
+    script: {fileID: 11500000, guid: 57c008f954fe54a8bb972de1018a2cb8, type: 3}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1.1969824
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.28333333
+        value: 1.1969824
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_Bounds.m_Extent.y
+    path: Kampilan_Head
+    classID: 114
+    script: {fileID: 11500000, guid: 57c008f954fe54a8bb972de1018a2cb8, type: 3}
   m_EulerEditorCurves:
   - curve:
       serializedVersion: 2
@@ -14046,7 +14352,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Arms/Kampilan_left_Arm/Left_Arm_1/Left_Arm_2
+    path: Torso/Kampilan_Torso_Upper/Upper_Torso_Middle/Upper_Torso_Right/Upper_Torso_Left
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -14056,7 +14362,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Arms/Kampilan_left_Arm/Left_Arm_1/Left_Arm_2
+    path: Torso/Kampilan_Torso_Upper/Upper_Torso_Middle/Upper_Torso_Right/Upper_Torso_Left
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -14066,7 +14372,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Arms/Kampilan_left_Arm/Left_Arm_1/Left_Arm_2
+    path: Torso/Kampilan_Torso_Upper/Upper_Torso_Middle/Upper_Torso_Right/Upper_Torso_Left
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -14406,7 +14712,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Torso/Kampilan_Torso_Upper/Upper_Torso_Middle/Upper_Torso_Right/Upper_Torso_Left
+    path: Arms/Kampilan_left_Arm/Left_Arm_1/Left_Arm_2
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -14416,7 +14722,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Torso/Kampilan_Torso_Upper/Upper_Torso_Middle/Upper_Torso_Right/Upper_Torso_Left
+    path: Arms/Kampilan_left_Arm/Left_Arm_1/Left_Arm_2
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -14426,7 +14732,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Torso/Kampilan_Torso_Upper/Upper_Torso_Middle/Upper_Torso_Right/Upper_Torso_Left
+    path: Arms/Kampilan_left_Arm/Left_Arm_1/Left_Arm_2
     classID: 4
     script: {fileID: 0}
   m_HasGenericRootTransform: 0
