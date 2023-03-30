@@ -21,7 +21,7 @@ This game uses these sounds from freesound:
 "Magic Strike.wav" by Aleks41 (https://freesound.org/s/406063/) licensed under CC0 1.0
 "Portal_Idle.wav" by couchHero (https://freesound.org/s/168910/) licensed under CC0 1.0
 "hitting_a_trowel_with_a_metal_file_01.wav" by joedeshon (https://freesound.org/s/78568/) licensed under CC BY 4.0
-"" by  () licensed under CC
+"saw_switched_on_1.wav" by Ferdinger (https://freesound.org/s/146235/) licensed under CC BY-NC 4.0
 "" by  () licensed under CC
 "" by  () licensed under CC
 "" by  () licensed under CC

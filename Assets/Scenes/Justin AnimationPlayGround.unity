@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 262.3369, g: 325.0498, b: 430.21924, a: 1}
+  m_IndirectSpecularColor: {r: 261.9017, g: 324.45706, b: 429.4361, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -972,10 +972,6 @@ PrefabInstance:
     - target: {fileID: 3604125374492368379, guid: 97783553d988a004784002745b49140e, type: 3}
       propertyPath: m_ApplyActiveColorSpace
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4583957518523939329, guid: 97783553d988a004784002745b49140e, type: 3}
-      propertyPath: WhichFolder
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5835307712540326328, guid: 97783553d988a004784002745b49140e, type: 3}
       propertyPath: m_Name
@@ -2126,7 +2122,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4568408214876941596, guid: 284fbc763fcff994c822d2e0af498523, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4568408214876941597, guid: 284fbc763fcff994c822d2e0af498523, type: 3}
       propertyPath: m_RootOrder
@@ -2353,6 +2349,18 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1251776383974093727, guid: 1a5bb56911789da47a5c5799ab8f8562, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1251776383974093727, guid: 1a5bb56911789da47a5c5799ab8f8562, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3319168552082283943, guid: 1a5bb56911789da47a5c5799ab8f8562, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4798300678157180107, guid: 1a5bb56911789da47a5c5799ab8f8562, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -2509,6 +2517,10 @@ PrefabInstance:
     - target: {fileID: 6510144058664191411, guid: 60dd579e43a30b249aff4732ce4e7a75, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.47
+      objectReference: {fileID: 0}
+    - target: {fileID: 8791710156972476597, guid: 60dd579e43a30b249aff4732ce4e7a75, type: 3}
+      propertyPath: rolloffMode
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60dd579e43a30b249aff4732ce4e7a75, type: 3}
