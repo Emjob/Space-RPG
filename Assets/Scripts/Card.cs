@@ -1,15 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class Card : MonoBehaviour
+public class Card : MonoBehaviour, IDragHandler
 {
     public int Heal;
     public int damage;
     public int speed;
     public int shield;
 
-  //  int con;
+    private Vector2 mousePosition = new Vector2();
+    private Vector2 startPosition = new Vector2();
+    private Vector2 differencePoint = new Vector2();
+
+    //  int con;
 
     public Camera myCam;
 
@@ -88,42 +93,77 @@ public class Card : MonoBehaviour
     void Update()
     {
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        if (isDragging)
+        //if (isDragging)
+        //{
+        //    DragObject();
+        //    collider.enabled = false;
+        //}
+        //if(!isDragging)
+        //{
+        //    collider.enabled = true;
+        //}
+        if (Input.GetMouseButton(0))
         {
-            DragObject();
-            collider.enabled = false;
+            UpdateMousePosition();
         }
-        if(!isDragging)
+        if (Input.GetMouseButtonDown(0))
         {
-            collider.enabled = true;
-        } 
+            UpdateStartPosition();
+            UpdateDifferencePoint();
+        }
     }
 
-    private void OnMouseDown()
+    //private void OnMouseDown()
+    //{
+    //    Vector3 mousePos = Input.mousePosition;
+
+
+    //    mousePos = myCam.ScreenToWorldPoint(mousePos);
+
+    //    startXPos = mousePos.x - transform.localPosition.x;
+    //    startYPos = mousePos.y - transform.localPosition.y;
+
+    //    isDragging = true;
+    //}
+
+    //private void OnMouseUp()
+    //{
+    //    isDragging = false;
+
+    //}
+
+
+    //public void DragObject()
+    //{
+    //    Vector3 mousePos = Input.mousePosition;
+
+    //    mousePos = myCam.ScreenToWorldPoint(mousePos);
+    //    transform.localPosition = new Vector3(mousePos.x - startXPos, mousePos.y - startYPos, -162.8474f);
+    //}
+
+
+    public void OnDrag(PointerEventData eventData)
     {
-        Vector3 mousePos = Input.mousePosition;
+        /*Minus the difference point so you can pick the 
+        element from the edges, without any jerk*/
 
-
-        mousePos = myCam.ScreenToWorldPoint(mousePos);
-
-        startXPos = mousePos.x - transform.localPosition.x;
-        startYPos = mousePos.y - transform.localPosition.y;
-
-        isDragging = true;
+        transform.position = mousePosition - differencePoint;
     }
 
-    private void OnMouseUp()
+    private void UpdateMousePosition()
     {
-        isDragging = false;
-
+        mousePosition.x = Input.mousePosition.x;
+        mousePosition.y = Input.mousePosition.y;
     }
 
-
-    public void DragObject()
+    private void UpdateStartPosition()
     {
-        Vector3 mousePos = Input.mousePosition;
+        startPosition.x = transform.position.x;
+        startPosition.y = transform.position.y;
+    }
 
-        mousePos = myCam.ScreenToWorldPoint(mousePos);
-        transform.localPosition = new Vector3(mousePos.x - startXPos, mousePos.y - startYPos, -162.8474f);
+    private void UpdateDifferencePoint()
+    {
+        differencePoint = mousePosition - startPosition;
     }
 }

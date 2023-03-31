@@ -35,7 +35,7 @@ public class enemyAttack : MonoBehaviour
         }
             if(n == 1)
             {
-            Anim.SetBool("isShakir_Heal", true);
+            Anim.SetBool("isHeal", true);
             StartCoroutine(ExecuteAfterHeal(Anim.GetCurrentAnimatorStateInfo(0).length));
             
         }
@@ -57,7 +57,7 @@ public class enemyAttack : MonoBehaviour
     {
 
         yield return new WaitForSeconds(time);
-        Anim.SetBool("isShakir_Heal", false);
+        Anim.SetBool("isHeal", false);
         GetComponent<Health>().EnemyHeal(Heal);
         GetComponent<Renderer>().material.color = new Color(255, 0, 211);
         Debug.Log("Heal");
