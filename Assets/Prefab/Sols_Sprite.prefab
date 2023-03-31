@@ -335,7 +335,7 @@ MonoBehaviour:
   - {fileID: 6510144058206380898}
   - {fileID: 6510144057603470471}
   m_Bounds:
-    m_Center: {x: 0.00014019012, y: 0.0037453175, z: 0}
+    m_Center: {x: 0.00014013052, y: 0.0037453175, z: 0}
     m_Extent: {x: 0.88486016, y: 1.2812552, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
@@ -760,8 +760,8 @@ MonoBehaviour:
   - {fileID: 6510144058179564609}
   - {fileID: 6510144057969832333}
   m_Bounds:
-    m_Center: {x: 0.2850001, y: -0.13294494, z: 0}
-    m_Extent: {x: 1.4000001, y: 1.152055, z: 0}
+    m_Center: {x: 0.28499973, y: -0.1329453, z: 0}
+    m_Extent: {x: 1.4000003, y: 1.1520548, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -953,8 +953,8 @@ MonoBehaviour:
   - {fileID: 6510144056712772408}
   - {fileID: 6510144058278369905}
   m_Bounds:
-    m_Center: {x: 0.00016486645, y: 0.0016653538, z: 0}
-    m_Extent: {x: 0.68585515, y: 1.2183354, z: 0}
+    m_Center: {x: 0.00016498566, y: 0.0016652346, z: 0}
+    m_Extent: {x: 0.6858551, y: 1.2183354, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -1467,7 +1467,7 @@ AudioSource:
   MinDistance: 1
   MaxDistance: 500
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -1555,7 +1555,6 @@ MonoBehaviour:
   AllSources: []
   WhichFolder: 0
   ClipsToPlay: []
-  MultiClipA: []
   MultiClipB: []
 --- !u!1 &6510144058200055703
 GameObject:
@@ -1956,8 +1955,8 @@ MonoBehaviour:
   - {fileID: 6510144056830617404}
   - {fileID: 6510144058734536003}
   m_Bounds:
-    m_Center: {x: 0.043234468, y: 0.012495011, z: 0}
-    m_Extent: {x: 1.6830454, y: 0.3825051, z: 0}
+    m_Center: {x: 0.043234468, y: 0.0124949515, z: 0}
+    m_Extent: {x: 1.6830449, y: 0.3825051, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -2064,8 +2063,8 @@ MonoBehaviour:
   - {fileID: 6510144057671801682}
   - {fileID: 6510144058091384480}
   m_Bounds:
-    m_Center: {x: 0.0005148649, y: -0.0018899441, z: 0}
-    m_Extent: {x: 1.156095, y: 1.24811, z: 0}
+    m_Center: {x: 0.0005143881, y: -0.0018899441, z: 0}
+    m_Extent: {x: 1.1560955, y: 1.24811, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -2288,8 +2287,8 @@ MonoBehaviour:
   - {fileID: 6510144058410021353}
   - {fileID: 6510144057471371399}
   m_Bounds:
-    m_Center: {x: -0.004999995, y: -0.00000011920929, z: 0}
-    m_Extent: {x: 0.595, y: 1.125, z: 0}
+    m_Center: {x: -0.004999876, y: -0.00000011920929, z: 0}
+    m_Extent: {x: 0.59500015, y: 1.1250001, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
