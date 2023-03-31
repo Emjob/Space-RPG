@@ -35,12 +35,9 @@ public class enemyAttack : MonoBehaviour
         }
             if(n == 1)
             {
-            Anim.SetBool("isHeal", true);
+            Anim.SetBool("isShakir_Heal", true);
             StartCoroutine(ExecuteAfterHeal(Anim.GetCurrentAnimatorStateInfo(0).length));
-            Anim.SetBool("isHeal", false);
-            GetComponent<Health>().EnemyHeal(Heal);
-            GetComponent<Renderer>().material.color = new Color(255, 0, 211);
-            Debug.Log("Heal");
+            
         }
 
        
@@ -51,7 +48,7 @@ public class enemyAttack : MonoBehaviour
         
         yield return new WaitForSeconds(time);
         Anim.SetBool("isAttacking1", false);
-        players[Random.Range(0, 2)].GetComponent<Health>().PlayerTakeDamage(damage);
+        players[Random.Range(0, players.Length)].GetComponent<Health>().PlayerTakeDamage(damage);
         Debug.Log("Attack");
         GetComponent<Renderer>().material.color = new Color(255, 0, 0);
         // Code to execute after the delay
@@ -60,10 +57,11 @@ public class enemyAttack : MonoBehaviour
     {
 
         yield return new WaitForSeconds(time);
-        Anim.SetBool("isAttacking1", false);
-        players[Random.Range(0, 2)].GetComponent<Health>().PlayerTakeDamage(damage);
-        Debug.Log("Attack");
-        GetComponent<Renderer>().material.color = new Color(255, 0, 0);
+        Anim.SetBool("isShakir_Heal", false);
+        GetComponent<Health>().EnemyHeal(Heal);
+        GetComponent<Renderer>().material.color = new Color(255, 0, 211);
+        Debug.Log("Heal");
+
         // Code to execute after the delay
     }
 }

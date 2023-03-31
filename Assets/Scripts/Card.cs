@@ -22,12 +22,15 @@ public class Card : MonoBehaviour
     public bool Dot;
     public bool DelayedHeal;
 
+    new Collider collider;
+
     CardSpawner Count;
 
     GameObject[] enemies = new GameObject[3];
 
     private void Start()
     {
+        collider = GetComponent<Collider>();
         myCam = Camera.main;
         Count = GameObject.Find("Holder").GetComponent<CardSpawner>();
     }
@@ -88,9 +91,12 @@ public class Card : MonoBehaviour
         if (isDragging)
         {
             DragObject();
+            collider.enabled = false;
         }
-        
-        
+        if(!isDragging)
+        {
+            collider.enabled = true;
+        } 
     }
 
     private void OnMouseDown()
@@ -109,6 +115,7 @@ public class Card : MonoBehaviour
     private void OnMouseUp()
     {
         isDragging = false;
+
     }
 
 

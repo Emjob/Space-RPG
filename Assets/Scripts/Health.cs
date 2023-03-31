@@ -213,7 +213,7 @@ public class Health : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Card")
+        if(other.tag == "Card" && gameObject.tag == "Player")
         {
             Collider.enabled = false;
         }
