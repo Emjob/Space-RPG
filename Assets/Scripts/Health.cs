@@ -137,7 +137,7 @@ public class Health : MonoBehaviour
                     healthBar.UpdateHealthBar();
                 }
                 healOnTurn = 0;
-                restore = false; 
+                 
             }
             if (DelayedHeal == true && myturn == true)
             {
@@ -150,7 +150,7 @@ public class Health : MonoBehaviour
                     currentHealth = currentHealth + healOnDelay;
                     healthBar.UpdateHealthBar();
                     healOnDelay = 0;
-                    DelayedHeal = false;
+                    
                 }
                 delay += 1;
                 
@@ -158,32 +158,38 @@ public class Health : MonoBehaviour
             if (hurt == true && myturn == true)
             {
                 Anim.SetBool("isHit", true);
+                StartCoroutine(ExecuteAfterTime(Anim.GetCurrentAnimatorStateInfo(0).length));
+                Anim.SetBool("isHit", false);
                 currentHealth = currentHealth - damageOnTurn;
                 
                 healthBar.UpdateHealthBar();
                 damageOnTurn = 0;
-                Anim.SetBool("isHit", false);
-                hurt = false;
+                
+                
             }
             if (Splash == true && myturn == true)
             {
                 Anim.SetBool("isHit", true);
+                StartCoroutine(ExecuteAfterTime(Anim.GetCurrentAnimatorStateInfo(0).length));
+                Anim.SetBool("isHit", false);
                 currentHealth = currentHealth - splash;
                 
                 healthBar.UpdateHealthBar();
                 splash = 0;
-                Anim.SetBool("isHit", false);
-                Splash = false;
+                
+                
             }
             if (Dot == true && myturn == true)
             {
                 Anim.SetBool("isHit", true);
+                StartCoroutine(ExecuteAfterTime(Anim.GetCurrentAnimatorStateInfo(0).length));
+                Anim.SetBool("isHit", false);
                 currentHealth = currentHealth - damageOverTurn;
                 
                 healthBar.UpdateHealthBar();
                 
                 turnCount += 1;
-                Anim.SetBool("isHit", false);
+                
             }
             if (getShield == true && myturn == true)
             {
@@ -196,7 +202,15 @@ public class Health : MonoBehaviour
         
 
     }
-
+    IEnumerator ExecuteAfterTime(float time)
+    {
+        yield return new WaitForSeconds(time);
+        Splash = false;
+        hurt = false;
+        DelayedHeal = false;
+        restore = false;
+        // Code to execute after the delay
+    }
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Card")

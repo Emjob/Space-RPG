@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5566720598750206982}
   - component: {fileID: 5566720598750206981}
   - component: {fileID: 5566720598750206980}
+  - component: {fileID: 6733879206107227582}
   m_Layer: 0
   m_Name: HealthStim
   m_TagString: Card
@@ -113,8 +114,21 @@ MonoBehaviour:
   Heal: 50
   damage: 0
   speed: 0
+  shield: 0
   myCam: {fileID: 0}
   Splash: 0
   Single: 1
   Dot: 0
   DelayedHeal: 0
+--- !u!114 &6733879206107227582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5566720598750206979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecca395e887a4a741bb115ebc5f4be42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
