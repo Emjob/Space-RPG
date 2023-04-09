@@ -7163,10 +7163,10 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0
+        time: 4.4
         value: 15
         inSlope: 0
-        outSlope: 0.2
+        outSlope: 1.666667
         tangentMode: 69
         weightedMode: 0
         inWeight: 0
@@ -7174,7 +7174,7 @@ AnimationClip:
       - serializedVersion: 3
         time: 5
         value: 16
-        inSlope: 0.2
+        inSlope: 1.666667
         outSlope: 0
         tangentMode: 69
         weightedMode: 0
@@ -30204,10 +30204,10 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0
+        time: 4.4
         value: 15
         inSlope: 0
-        outSlope: 0.2
+        outSlope: 1.666667
         tangentMode: 69
         weightedMode: 0
         inWeight: 0
@@ -30215,7 +30215,7 @@ AnimationClip:
       - serializedVersion: 3
         time: 5
         value: 16
-        inSlope: 0.2
+        inSlope: 1.666667
         outSlope: 0
         tangentMode: 69
         weightedMode: 0
@@ -31614,6 +31614,20 @@ AnimationClip:
   m_Events:
   - time: 0.5
     functionName: RNGSound
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 7.883333
+    functionName: 
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 7.883333
+    functionName: Silence
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

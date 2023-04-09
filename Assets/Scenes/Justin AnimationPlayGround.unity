@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 262.3369, g: 325.0498, b: 430.21924, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1988,18 +1988,6 @@ PrefabInstance:
     - target: {fileID: 1186219851778469071, guid: 1a5bb56911789da47a5c5799ab8f8562, type: 3}
       propertyPath: m_Enabled
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1251776383974093727, guid: 1a5bb56911789da47a5c5799ab8f8562, type: 3}
-      propertyPath: rolloffMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1251776383974093727, guid: 1a5bb56911789da47a5c5799ab8f8562, type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3319168552082283943, guid: 1a5bb56911789da47a5c5799ab8f8562, type: 3}
-      propertyPath: rolloffMode
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4798300678157180107, guid: 1a5bb56911789da47a5c5799ab8f8562, type: 3}
       propertyPath: m_Enabled
