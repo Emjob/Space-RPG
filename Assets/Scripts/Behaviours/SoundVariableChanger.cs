@@ -6,12 +6,13 @@ public class SoundVariableChanger : StateMachineBehaviour
 {
     private RandomSound RandomSound;
 
-    public int WhichFolder;
+    public int WhichFolder, SoundToChangeTo;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         RandomSound = animator.GetComponent<RandomSound>();
         RandomSound.WhichFolder = WhichFolder;
+        RandomSound.SoundToChangeTo = SoundToChangeTo;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

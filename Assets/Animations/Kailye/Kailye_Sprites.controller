@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WhichFolder: 1
+  SoundToChangeTo: 0
 --- !u!114 &-5291343665543105058
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -26,6 +27,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WhichFolder: 5
+  SoundToChangeTo: 0
 --- !u!1102 &-4744404388597292831
 AnimatorState:
   serializedVersion: 6
@@ -118,19 +120,19 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: isDead
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: isHit
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -225,6 +227,20 @@ AnimatorStateMachine:
   m_ExitPosition: {x: 880, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: 8080408347991979796}
+--- !u!114 &4994804999924979590
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e708f1c6465942a42ac1607e608415ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WhichFolder: 9
+  SoundToChangeTo: 0
 --- !u!1101 &5200089299807641480
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -371,7 +387,8 @@ AnimatorState:
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
-  m_StateMachineBehaviours: []
+  m_StateMachineBehaviours:
+  - {fileID: 4994804999924979590}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -399,3 +416,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WhichFolder: 9
+  SoundToChangeTo: 0

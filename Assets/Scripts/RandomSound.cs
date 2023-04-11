@@ -7,7 +7,8 @@ public class RandomSound : MonoBehaviour
     public AudioSource[] AllSources;
     private AudioSource RNGSource;
     private AudioSource MultiSourceB;
-    public int WhichFolder;
+    private Animator Anim;
+    public int WhichFolder, SoundToChangeTo;
     public List<AudioClip> ClipsToPlay, MultiClipB;
     //public AudioClip prevClip;
     
@@ -21,6 +22,7 @@ public class RandomSound : MonoBehaviour
             MultiSourceB = AllSources[1];
         }
         CheckFolder();
+        Anim = GetComponent<Animator>();
     }
 
     public void RNGSound()
@@ -182,6 +184,8 @@ public class RandomSound : MonoBehaviour
     public void CHANGE_NOW()
     {
         //use this to dynamically change the WhichFolder int
+        WhichFolder = SoundToChangeTo;
+        CheckFolder();
     }
     
   /*  public void FadeOut()
