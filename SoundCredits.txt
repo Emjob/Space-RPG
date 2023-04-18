@@ -11,7 +11,7 @@ This game uses these sounds from freesound:
 "Injury.wav" by LorenzoTheGreat (https://freesound.org/s/417793/) licensed under CC BY 3.0
 "Card shuffling.mp3" by SomeoneCool15 (https://freesound.org/s/423767/) licensed under CC0 1.0
 "POWER09.WAV" by mad-monkey (https://freesound.org/s/66694/) licensed under CC0 1.0
-"Power08.WAV" by mad-monkey (https://freesound.org/s/66694/) licensed under CC0 1.0
+"Power08.WAV" by mad-monkey (https://freesound.org/s/66695/) licensed under CC0 1.0
 "Ping.wav" by DrMrSir (https://freesound.org/s/529559/) licensed under CC BY 3.0
 "whoosh motron very low.wav" by melissapons (https://freesound.org/s/171588/) licensed under CC BY 3.0
 "Beep confirmation OK" by SamsterBirdies (https://freesound.org/s/581603/) licensed under CC0 1.0
@@ -22,8 +22,9 @@ This game uses these sounds from freesound:
 "Portal_Idle.wav" by couchHero (https://freesound.org/s/168910/) licensed under CC0 1.0
 "hitting_a_trowel_with_a_metal_file_01.wav" by joedeshon (https://freesound.org/s/78568/) licensed under CC BY 4.0
 "saw_switched_on_1.wav" by Ferdinger (https://freesound.org/s/146235/) licensed under CC BY-NC 4.0
-"" by  () licensed under CC
-"" by  () licensed under CC
+"METAL BANG.wav" by trexlasso (https://freesound.org/s/629999/) licensed under CC0 1.0
+"Klean kanteen falls and spills.WAV" by rocky12345 (https://freesound.org/s/120908/) licensed under CC BY-NC 3.0
+"Aircraft - Futuristic Aircraft hovering above ground.wav" by DamianMinnie (https://freesound.org/s/327538/) licensed under CC BY-NC 3.0
 "" by  () licensed under CC
 "" by  () licensed under CC
 "" by  () licensed under CC

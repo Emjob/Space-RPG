@@ -7,7 +7,8 @@ public class RandomSound : MonoBehaviour
     public AudioSource[] AllSources;
     private AudioSource RNGSource;
     private AudioSource MultiSourceB;
-    public int WhichFolder;
+    private Animator Anim;
+    public int WhichFolder, SoundToChangeTo;
     public List<AudioClip> ClipsToPlay, MultiClipB;
     //public AudioClip prevClip;
     
@@ -20,15 +21,15 @@ public class RandomSound : MonoBehaviour
         {
             MultiSourceB = AllSources[1];
         }
-
         CheckFolder();
+        Anim = GetComponent<Animator>();
     }
 
     public void RNGSound()
     {
         CheckFolder();
         RNGSource.clip = ClipsToPlay[Random.Range(0, (ClipsToPlay.Count))];
-        RNGSource.Play();
+        RNGSource.PlayOneShot(RNGSource.clip,RNGSource.volume);
         Debug.Log(gameObject.name + " is now playing: " + RNGSource.clip.name);
     }
     
@@ -36,7 +37,7 @@ public class RandomSound : MonoBehaviour
     {
         CheckFolder();
         MultiSourceB.clip = ClipsToPlay[Random.Range(0, (ClipsToPlay.Count))];
-        MultiSourceB.Play();
+        MultiSourceB.PlayOneShot(MultiSourceB.clip, MultiSourceB.volume);
         Debug.Log(gameObject.name + " is now playing, closely behind: " + MultiSourceB.clip.name);
     }
 
@@ -45,8 +46,8 @@ public class RandomSound : MonoBehaviour
         CheckFolder();
         RNGSource.clip = ClipsToPlay[Random.Range(0, ClipsToPlay.Count)];
         MultiSourceB.clip = MultiClipB[Random.Range(0, MultiClipB.Count)];
-        RNGSource.Play();
-        Debug.Log("Now playing: " + RNGSource.clip.name);
+        RNGSource.PlayOneShot(RNGSource.clip,RNGSource.volume);
+        Debug.Log(gameObject.name + " is now playing: " + RNGSource.clip.name);
         MultiSourceB.PlayDelayed(RNGSource.clip.length);
         Debug.Log("and also: " + MultiSourceB.clip.name);
         //prevClip = RNGSource.clip;
@@ -147,6 +148,18 @@ public class RandomSound : MonoBehaviour
                     ClipsToPlay.Add(Clips);
                 }
                 break;
+            case 17: //HOVER
+                foreach (AudioClip Clips in Resources.LoadAll<AudioClip>("Sounds/Sound Effects/hover"))
+                {
+                    ClipsToPlay.Add(Clips);
+                }
+                break;
+            case 18: //ASSEMBLY
+                foreach (AudioClip Clips in Resources.LoadAll<AudioClip>("Sounds/Sound Effects/assemble"))
+                {
+                    ClipsToPlay.Add(Clips);
+                }
+                break;
             default://WEIRD SOUND YOU SHOULDN'T BE ABLE TO HEAR
                 foreach (AudioClip Clips in Resources.LoadAll<AudioClip>("Sounds/Sound Effects/youshouldnthearthis"))
                 {
@@ -168,6 +181,13 @@ public class RandomSound : MonoBehaviour
         MultiSourceB.loop = MultiSourceB.loop != true;
     }
 
+    public void CHANGE_NOW()
+    {
+        //use this to dynamically change the WhichFolder int
+        WhichFolder = SoundToChangeTo;
+        CheckFolder();
+    }
+    
   /*  public void FadeOut()
     {
         while (RNGSource.volume > 0)
