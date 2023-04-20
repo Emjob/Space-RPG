@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: bfa416476add3ae44a22e8ea78915b50
+guid: 7a415177c61d9684b84c77b324e6f2d0
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -67,7 +67,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 4096
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -117,7 +117,49 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Main Screen Tilesheet Temp_0
+      name: Main Screen Tilesheet Temp 1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2160
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4ec9e4142f7959478e947baa501ca4b
+      internalID: 1452707023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main Screen Tilesheet Temp 1_1
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 2160
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfc8ef6407a62204ab156090fc4c5284
+      internalID: 665917484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main Screen Tilesheet Temp 1_2
       rect:
         serializedVersion: 2
         x: 0
@@ -131,14 +173,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3fb248b8df0c44e4aa28e5e03cfd6c6e
-      internalID: -310352085
+      spriteID: b7f030ea95f47b6498bc1f9c53d70732
+      internalID: 942171214
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Main Screen Tilesheet Temp_1
+      name: Main Screen Tilesheet Temp 1_3
       rect:
         serializedVersion: 2
         x: 1920
@@ -152,14 +194,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 25b0472fc9d13094f958ca47b860597b
-      internalID: -1468237018
+      spriteID: fd4b123ca4a3efe419de43912b599384
+      internalID: -1496318858
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Main Screen Tilesheet Temp_2
+      name: Main Screen Tilesheet Temp 1_4
       rect:
         serializedVersion: 2
         x: 0
@@ -173,14 +215,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d71ea28c1907f154ebdf4e9f0a394688
-      internalID: 1577015742
+      spriteID: 2ecf7acdc4f79d247aa778607ddb6ede
+      internalID: 478695698
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Main Screen Tilesheet Temp_3
+      name: Main Screen Tilesheet Temp 1_5
       rect:
         serializedVersion: 2
         x: 1920
@@ -194,8 +236,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e461ca42430463f459810cc86c055e98
-      internalID: 92812357
+      spriteID: dbb249a6d874f3646b48582edd3d8dfd
+      internalID: -1586162089
       vertices: []
       indices: 
       edges: []
@@ -203,7 +245,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: a0a080b72f781754dafe4e6076d8356d
+    spriteID: 5650fdaf6ab7519458fe0df00134f96d
     internalID: 0
     vertices: []
     indices: 
@@ -211,10 +253,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Main Screen Tilesheet Temp_3: 92812357
-      Main Screen Tilesheet Temp_2: 1577015742
-      Main Screen Tilesheet Temp_0: -310352085
-      Main Screen Tilesheet Temp_1: -1468237018
+      Main Screen Tilesheet Temp 1_4: 478695698
+      Main Screen Tilesheet Temp 1_3: -1496318858
+      Main Screen Tilesheet Temp 1_5: -1586162089
+      Main Screen Tilesheet Temp 1_2: 942171214
+      Main Screen Tilesheet Temp 1_0: 1452707023
+      Main Screen Tilesheet Temp 1_1: 665917484
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
