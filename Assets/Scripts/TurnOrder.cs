@@ -63,8 +63,7 @@ public class TurnOrder : MonoBehaviour
             }
             if (speed[i].CompareTag("Player"))
             {
-                speed[i].GetComponent<Health>().myturn = true;
-
+                speed[i].GetComponent<PlayerAttack>().myturn = true;
             }
             if (speed[i].CompareTag("Enemy"))
             {

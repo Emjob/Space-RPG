@@ -110,113 +110,109 @@ public class Health : MonoBehaviour
         }
 
 
-        if (myturn == true)
-        {
-            if (turnCount == DotTurns)
-            {
-                damageOverTurn = 0;
-                Dot = false;
-            }
-            if (turnCounting == DotTurns)
-            {
-                getShield = false;
-                currentHealth = currentHealth - gainShield;
-                gainShield = 0;
-            }
-            Collider.enabled = true;
-            if(currentHealth > baseStats.maxHealth)
-            {
-                currentHealth = baseStats.maxHealth;
-            }
-            if (restore == true && myturn == true)
-            {
+        //if (myturn == true)
+        //{
+        //    if (turnCount == DotTurns)
+        //    {
+        //        damageOverTurn = 0;
+        //        Dot = false;
+        //    }
+        //    if (turnCounting == DotTurns)
+        //    {
+        //        getShield = false;
+        //        currentHealth = currentHealth - gainShield;
+        //        gainShield = 0;
+        //    }
+        //    Collider.enabled = true;
+        //    if(currentHealth > baseStats.maxHealth)
+        //    {
+        //        currentHealth = baseStats.maxHealth;
+        //    }
+        //    if (restore == true && myturn == true)
+        //    {
                 
-                if (currentHealth < baseStats.maxHealth)
-                {
-                    currentHealth = currentHealth + healOnTurn;
-                    healthBar.UpdateHealthBar();
-                }
-                healOnTurn = 0;
+        //        if (currentHealth < baseStats.maxHealth)
+        //        {
+        //            currentHealth = currentHealth + healOnTurn;
+        //            healthBar.UpdateHealthBar();
+        //        }
+        //        healOnTurn = 0;
                  
-            }
-            if (DelayedHeal == true && myturn == true)
-            {
-                if(delay > 1)
-                {
-                    delay = 0;
-                }
-                if (currentHealth < baseStats.maxHealth && delay == 1)
-                {
-                    currentHealth = currentHealth + healOnDelay;
-                    healthBar.UpdateHealthBar();
-                    healOnDelay = 0;
+        //    }
+        //    if (DelayedHeal == true && myturn == true)
+        //    {
+        //        if(delay > 1)
+        //        {
+        //            delay = 0;
+        //        }
+        //        if (currentHealth < baseStats.maxHealth && delay == 1)
+        //        {
+        //            currentHealth = currentHealth + healOnDelay;
+        //            healthBar.UpdateHealthBar();
+        //            healOnDelay = 0;
                     
-                }
-                delay += 1;
+        //        }
+        //        delay += 1;
                 
-            }
-            if (hurt == true && myturn == true)
-            {
-                Anim.SetBool("isHit", true);
-                StartCoroutine(ExecuteAfterTime(Anim.GetCurrentAnimatorStateInfo(0).length));
-                Anim.SetBool("isHit", false);
-                currentHealth = currentHealth - damageOnTurn;
+        //    }
+        //    if (hurt == true && myturn == true)
+        //    {
+        //        Anim.SetBool("isHit", true);
+        //        StartCoroutine(ExecuteAfterTime(Anim.GetCurrentAnimatorStateInfo(0).length));
+        //        Anim.SetBool("isHit", false);
+        //        currentHealth = currentHealth - damageOnTurn;
                 
-                healthBar.UpdateHealthBar();
-                damageOnTurn = 0;
-                
-                
-            }
-            if (Splash == true && myturn == true)
-            {
-                Anim.SetBool("isHit", true);
-                StartCoroutine(ExecuteAfterTime(Anim.GetCurrentAnimatorStateInfo(0).length));
-                Anim.SetBool("isHit", false);
-                currentHealth = currentHealth - splash;
-                
-                healthBar.UpdateHealthBar();
-                splash = 0;
+        //        healthBar.UpdateHealthBar();
+        //        damageOnTurn = 0;
                 
                 
-            }
-            if (Dot == true && myturn == true)
-            {
-                Anim.SetBool("isHit", true);
-                StartCoroutine(ExecuteAfterTime(Anim.GetCurrentAnimatorStateInfo(0).length));
-                Anim.SetBool("isHit", false);
-                currentHealth = currentHealth - damageOverTurn;
+        //    }
+        //    if (Splash == true && myturn == true)
+        //    {
+        //        Anim.SetBool("isHit", true);
+        //        StartCoroutine(ExecuteAfterTime(Anim.GetCurrentAnimatorStateInfo(0).length));
+        //        Anim.SetBool("isHit", false);
+        //        currentHealth = currentHealth - splash;
                 
-                healthBar.UpdateHealthBar();
+        //        healthBar.UpdateHealthBar();
+        //        splash = 0;
                 
-                turnCount += 1;
                 
-            }
-            if (getShield == true && myturn == true)
-            {
+        //    }
+        //    if (Dot == true && myturn == true)
+        //    {
+        //        Anim.SetBool("isHit", true);
+        //        StartCoroutine(ExecuteAfterTime(Anim.GetCurrentAnimatorStateInfo(0).length));
+        //        Anim.SetBool("isHit", false);
+        //        currentHealth = currentHealth - damageOverTurn;
                 
-                currentHealth = currentHealth + gainShield;
-                        turnCounting += 1;  
-            }
-            myturn = false;
-        }
+        //        healthBar.UpdateHealthBar();
+                
+        //        turnCount += 1;
+                
+        //    }
+        //    if (getShield == true && myturn == true)
+        //    {
+                
+        //        currentHealth = currentHealth + gainShield;
+        //                turnCounting += 1;  
+        //    }
+        //   
+        //}
         
 
     }
-    IEnumerator ExecuteAfterTime(float time)
-    {
-        yield return new WaitForSeconds(time);
-        Splash = false;
-        hurt = false;
-        DelayedHeal = false;
-        restore = false;
-        // Code to execute after the delay
-    }
+    
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Card" && gameObject.tag == "Player")
         {
             Collider.enabled = false;
         }
+    }
+    private void OnMouseDown()
+    {
+        Debug.Log("Mouse Click Detected");
     }
 
 }

@@ -3,16 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class Card : MonoBehaviour, IDragHandler
+public class Card : MonoBehaviour
 {
     public int Heal;
     public int damage;
     public int speed;
     public int shield;
 
-    private Vector2 mousePosition = new Vector2();
-    private Vector2 startPosition = new Vector2();
-    private Vector2 differencePoint = new Vector2();
+    public int timer;
+    
 
     //  int con;
 
@@ -43,127 +42,103 @@ public class Card : MonoBehaviour, IDragHandler
     void OnTriggerEnter(Collider other)
     {
         // Debug.Log("HELP");
-        if (other.gameObject.tag == "Enemy" && damage > 0 && Single)
+        
+        if (damage > 0 && Single)
         {
-            other.GetComponent<Collider>().GetComponent<Health>().hurt = true;
-            other.GetComponent<Collider>().GetComponent<Health>().EnemyTakeDamage(damage);
+            other.GetComponent<PlayerAttack>().isTargeting = true;
+            other.GetComponent<Collider>().GetComponent<PlayerAttack>().Attack = true;
+            other.GetComponent<Collider>().GetComponent<PlayerAttack>().instDamage += damage;
+            
+            Destroy(gameObject);
+        }
+        if (damage > 0 && Splash)
+        {
+            other.GetComponent<PlayerAttack>().isTargeting = true;
+            other.GetComponent<Collider>().GetComponent<PlayerAttack>().Splash = true;
+            other.GetComponent<Collider>().GetComponent<PlayerAttack>().splashDamage += damage;
             Count.counter += 1;
             Destroy(gameObject);
         }
-        if (other.gameObject.tag == "Enemy" && damage > 0 && Splash)
+        if (damage > 0 && Dot)
         {
-            for (int i = 0; i < enemies.Length; i++)
+            other.GetComponent<PlayerAttack>().isTargeting = true;
+            other.GetComponent<Collider>().GetComponent<PlayerAttack>().Dot = true;
+            other.GetComponent<Collider>().GetComponent<PlayerAttack>().turnCount += timer;
+            if(other.GetComponent<Collider>().GetComponent<PlayerAttack>().turnCount == 0)
             {
-                enemies[i].GetComponent<Health>().Splash = true;
-                enemies[i].GetComponent<Health>().SplashDamage(damage);
+             other.GetComponent<Collider>().GetComponent<PlayerAttack>().DOT += damage;
             }
+
+            Destroy(gameObject);
+        }
+        if (Heal > 0 && Single)
+        {
+            other.GetComponent<Collider>().GetComponent<PlayerAttack>().restore = true;
+            other.GetComponent<Collider>().GetComponent<PlayerAttack>().Healing += Heal;
             Count.counter += 1;
             Destroy(gameObject);
         }
-        if (other.gameObject.tag == "Enemy" && damage > 0 && Dot)
+        if (Heal > 0 && DelayedHeal)
         {
-            other.GetComponent<Collider>().GetComponent<Health>().Dot = true;
-            other.GetComponent<Collider>().GetComponent<Health>().DamageOverTurn(damage);
+            other.GetComponent<Collider>().GetComponent<PlayerAttack>().DelayedHeal = true;
+            other.GetComponent<Collider>().GetComponent<PlayerAttack>().healOnDelay += Heal;
+            other.GetComponent<Collider>().GetComponent<PlayerAttack>().delay += timer;
             Count.counter += 1;
             Destroy(gameObject);
         }
-        if (other.gameObject.tag == "Player" && Heal > 0 && Single)
+        if (shield > 0 && Single)
         {
-            other.GetComponent<Collider>().GetComponent<Health>().restore = true;
-            other.GetComponent<Collider>().GetComponent<Health>().PlayerHeal(Heal);
-            Count.counter += 1;
-            Destroy(gameObject);
-        }
-        if (other.gameObject.tag == "Player" && Heal > 0 && DelayedHeal)
-        {
-            other.GetComponent<Collider>().GetComponent<Health>().DelayedHeal = true;
-            other.GetComponent<Collider>().GetComponent<Health>().PreparedHeal(Heal);
-            Count.counter += 1;
-            Destroy(gameObject);
-        }
-        if (other.gameObject.tag == "Player" && shield > 0 && Single)
-        {
-            other.GetComponent<Collider>().GetComponent<Health>().getShield = true;
-            other.GetComponent<Collider>().GetComponent<Health>().Shielded(shield);
+            other.GetComponent<Collider>().GetComponent<PlayerAttack>().getShield = true;
+            other.GetComponent<Collider>().GetComponent<PlayerAttack>().Shielding += shield;
             Count.counter += 1;
             Destroy(gameObject);
         }
     }
+
 
     void Update()
     {
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        //if (isDragging)
-        //{
-        //    DragObject();
-        //    collider.enabled = false;
-        //}
-        //if(!isDragging)
-        //{
-        //    collider.enabled = true;
-        //}
-        if (Input.GetMouseButton(0))
+        if (isDragging)
         {
-            UpdateMousePosition();
+            DragObject();
+            collider.enabled = false;
         }
-        if (Input.GetMouseButtonDown(0))
+        if (!isDragging)
         {
-            UpdateStartPosition();
-            UpdateDifferencePoint();
+            collider.enabled = true;
         }
+
     }
 
-    //private void OnMouseDown()
-    //{
-    //    Vector3 mousePos = Input.mousePosition;
-
-
-    //    mousePos = myCam.ScreenToWorldPoint(mousePos);
-
-    //    startXPos = mousePos.x - transform.localPosition.x;
-    //    startYPos = mousePos.y - transform.localPosition.y;
-
-    //    isDragging = true;
-    //}
-
-    //private void OnMouseUp()
-    //{
-    //    isDragging = false;
-
-    //}
-
-
-    //public void DragObject()
-    //{
-    //    Vector3 mousePos = Input.mousePosition;
-
-    //    mousePos = myCam.ScreenToWorldPoint(mousePos);
-    //    transform.localPosition = new Vector3(mousePos.x - startXPos, mousePos.y - startYPos, -162.8474f);
-    //}
-
-
-    public void OnDrag(PointerEventData eventData)
+    private void OnMouseDown()
     {
-        /*Minus the difference point so you can pick the 
-        element from the edges, without any jerk*/
+        Vector3 mousePos = Input.mousePosition;
 
-        transform.position = mousePosition - differencePoint;
+
+        mousePos = myCam.ScreenToWorldPoint(mousePos);
+
+        startXPos = mousePos.x - transform.localPosition.x;
+        startYPos = mousePos.y - transform.localPosition.y;
+
+        isDragging = true;
     }
 
-    private void UpdateMousePosition()
+    private void OnMouseUp()
     {
-        mousePosition.x = Input.mousePosition.x;
-        mousePosition.y = Input.mousePosition.y;
+        isDragging = false;
+
     }
 
-    private void UpdateStartPosition()
+
+    public void DragObject()
     {
-        startPosition.x = transform.position.x;
-        startPosition.y = transform.position.y;
+        Vector3 mousePos = Input.mousePosition;
+
+        mousePos = myCam.ScreenToWorldPoint(mousePos);
+        transform.localPosition = new Vector3(mousePos.x - startXPos, mousePos.y - startYPos, -162.8474f);
     }
 
-    private void UpdateDifferencePoint()
-    {
-        differencePoint = mousePosition - startPosition;
-    }
+
+
 }

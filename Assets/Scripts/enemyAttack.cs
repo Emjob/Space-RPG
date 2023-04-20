@@ -50,7 +50,7 @@ public class enemyAttack : MonoBehaviour
         Anim.SetBool("isAttacking1", false);
         players[Random.Range(0, players.Length)].GetComponent<Health>().PlayerTakeDamage(damage);
         Debug.Log("Attack");
-        GetComponent<Renderer>().material.color = new Color(255, 0, 0);
+     //   GetComponent<Renderer>().material.color = new Color(255, 0, 0);
         // Code to execute after the delay
     }
     IEnumerator ExecuteAfterHeal(float time)
@@ -59,7 +59,7 @@ public class enemyAttack : MonoBehaviour
         yield return new WaitForSeconds(time);
         Anim.SetBool("isHeal", false);
         GetComponent<Health>().EnemyHeal(Heal);
-        GetComponent<Renderer>().material.color = new Color(255, 0, 211);
+     //   GetComponent<Renderer>().material.color = new Color(255, 0, 211);
         Debug.Log("Heal");
 
         // Code to execute after the delay
