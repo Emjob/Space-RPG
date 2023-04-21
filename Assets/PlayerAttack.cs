@@ -48,7 +48,7 @@ public class PlayerAttack : MonoBehaviour, IDropHandler
     void Start()
     {
         acuire = GameObject.Find("Dectector").GetComponent<mouseDetect>();
-
+        Collider = GetComponent<Collider>();
         Anim = gameObject.GetComponent<Animator>();
     }
 
