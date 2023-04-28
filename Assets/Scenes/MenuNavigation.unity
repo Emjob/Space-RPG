@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 262.3369, g: 325.0498, b: 430.21924, a: 1}
+  m_IndirectSpecularColor: {r: 261.9017, g: 324.45706, b: 429.4361, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -136,11 +136,11 @@ GameObject:
   - component: {fileID: 1568330}
   m_Layer: 5
   m_Name: Main Screen (7)
-  m_TagString: Untagged
+  m_TagString: MapScreen
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1568329
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1163,6 +1163,18 @@ MonoBehaviour:
           m_StringArgument: Ethan Test Scene
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 454508955}
+        m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
+        m_MethodName: ChangeNumber
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 6
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &156258456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1214,7 +1226,7 @@ GameObject:
   - component: {fileID: 189543285}
   m_Layer: 5
   m_Name: Main Screen (1)
-  m_TagString: Untagged
+  m_TagString: MapScreen
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1906,11 +1918,11 @@ GameObject:
   - component: {fileID: 250546233}
   m_Layer: 5
   m_Name: Main Screen (19)
-  m_TagString: Untagged
+  m_TagString: MapScreen
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &250546232
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2067,6 +2079,18 @@ MonoBehaviour:
           m_StringArgument: Ethan Test Scene
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 454508955}
+        m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
+        m_MethodName: ChangeNumber
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 17
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &256195114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2198,6 +2222,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Ethan Test Scene
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 454508955}
+        m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
+        m_MethodName: ChangeNumber
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 13
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &270121994
@@ -2333,6 +2369,18 @@ MonoBehaviour:
           m_StringArgument: Ethan Test Scene
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 454508955}
+        m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
+        m_MethodName: ChangeNumber
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &280397004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2464,6 +2512,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Ethan Test Scene
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 454508955}
+        m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
+        m_MethodName: ChangeNumber
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &337346656
@@ -2730,6 +2790,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Ethan Test Scene
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 454508955}
+        m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
+        m_MethodName: ChangeNumber
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 11
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &367865766
@@ -3046,6 +3118,7 @@ GameObject:
   m_Component:
   - component: {fileID: 454508956}
   - component: {fileID: 454508955}
+  - component: {fileID: 454508957}
   m_Layer: 0
   m_Name: LevelSelector
   m_TagString: Untagged
@@ -3080,6 +3153,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &454508957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454508954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4be24d37df395bd438d8691fa82fd7ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BattleData:
+    currentScreen: 0
+  MapScreens: []
+  filePath: 
+  currentScreenObj: {fileID: 0}
 --- !u!1 &465776385
 GameObject:
   m_ObjectHideFlags: 0
@@ -3226,11 +3316,11 @@ GameObject:
   - component: {fileID: 489242828}
   m_Layer: 5
   m_Name: Main Screen (14)
-  m_TagString: Untagged
+  m_TagString: MapScreen
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &489242827
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3309,7 +3399,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &526853970
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3386,6 +3476,18 @@ MonoBehaviour:
           m_StringArgument: Ethan Test Scene
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 454508955}
+        m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
+        m_MethodName: ChangeNumber
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 7
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &526853972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3437,11 +3539,11 @@ GameObject:
   - component: {fileID: 527761448}
   m_Layer: 5
   m_Name: Main Screen (11)
-  m_TagString: Untagged
+  m_TagString: MapScreen
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &527761447
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3806,6 +3908,18 @@ MonoBehaviour:
           m_StringArgument: Ethan Test Scene
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 454508955}
+        m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
+        m_MethodName: ChangeNumber
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 18
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &606315090
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3918,11 +4032,11 @@ GameObject:
   - component: {fileID: 654897186}
   m_Layer: 5
   m_Name: Main Screen (20)
-  m_TagString: Untagged
+  m_TagString: MapScreen
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &654897185
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3996,11 +4110,11 @@ GameObject:
   - component: {fileID: 657784465}
   m_Layer: 5
   m_Name: Main Screen (5)
-  m_TagString: Untagged
+  m_TagString: MapScreen
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &657784464
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4075,11 +4189,11 @@ GameObject:
   - component: {fileID: 680323794}
   m_Layer: 5
   m_Name: Main Screen (21)
-  m_TagString: Untagged
+  m_TagString: MapScreen
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &680323793
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4235,6 +4349,18 @@ MonoBehaviour:
           m_StringArgument: Ethan Test Scene
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 454508955}
+        m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
+        m_MethodName: ChangeNumber
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &685323634
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4366,6 +4492,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Ethan Test Scene
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 454508955}
+        m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
+        m_MethodName: ChangeNumber
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 20
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &720543576
@@ -4552,11 +4690,11 @@ GameObject:
   - component: {fileID: 743803595}
   m_Layer: 5
   m_Name: Main Screen (16)
-  m_TagString: Untagged
+  m_TagString: MapScreen
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &743803594
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4845,6 +4983,18 @@ MonoBehaviour:
           m_StringArgument: Ethan Test Scene
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 454508955}
+        m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
+        m_MethodName: ChangeNumber
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &771799488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5113,11 +5263,11 @@ GameObject:
   - component: {fileID: 838719867}
   m_Layer: 5
   m_Name: Main Screen (10)
-  m_TagString: Untagged
+  m_TagString: MapScreen
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &838719866
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5273,6 +5423,18 @@ MonoBehaviour:
           m_StringArgument: Ethan Test Scene
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 454508955}
+        m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
+        m_MethodName: ChangeNumber
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &845178098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5324,11 +5486,11 @@ GameObject:
   - component: {fileID: 861662390}
   m_Layer: 5
   m_Name: Main Screen (22)
-  m_TagString: Untagged
+  m_TagString: MapScreen
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &861662389
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5483,6 +5645,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Ethan Test Scene
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 454508955}
+        m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
+        m_MethodName: ChangeNumber
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 21
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &866378605
@@ -5739,6 +5913,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 454508955}
+        m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
+        m_MethodName: ChangeNumber
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 454508955}
         m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
         m_MethodName: LoadScene
@@ -6007,6 +6193,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 454508955}
         m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
+        m_MethodName: ChangeNumber
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 454508955}
+        m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
         m_MethodName: LoadScene
         m_Mode: 5
         m_Arguments:
@@ -6068,11 +6266,11 @@ GameObject:
   - component: {fileID: 1017288838}
   m_Layer: 5
   m_Name: Main Screen (8)
-  m_TagString: Untagged
+  m_TagString: MapScreen
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1017288837
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6147,11 +6345,11 @@ GameObject:
   - component: {fileID: 1034595574}
   m_Layer: 5
   m_Name: Main Screen (2)
-  m_TagString: Untagged
+  m_TagString: MapScreen
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1034595573
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6460,11 +6658,11 @@ GameObject:
   - component: {fileID: 1216941967}
   m_Layer: 5
   m_Name: Main Screen (4)
-  m_TagString: Untagged
+  m_TagString: MapScreen
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1216941966
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6621,6 +6819,18 @@ MonoBehaviour:
           m_StringArgument: Ethan Test Scene
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 454508955}
+        m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
+        m_MethodName: ChangeNumber
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 10
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1221152928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6744,6 +6954,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 454508955}
         m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
+        m_MethodName: ChangeNumber
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 454508955}
+        m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
         m_MethodName: LoadScene
         m_Mode: 5
         m_Arguments:
@@ -6805,11 +7027,11 @@ GameObject:
   - component: {fileID: 1264016802}
   m_Layer: 5
   m_Name: Main Screen (9)
-  m_TagString: Untagged
+  m_TagString: MapScreen
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1264016801
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7231,6 +7453,18 @@ MonoBehaviour:
           m_StringArgument: Ethan Test Scene
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 454508955}
+        m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
+        m_MethodName: ChangeNumber
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 19
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1298753239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7364,6 +7598,18 @@ MonoBehaviour:
           m_StringArgument: Ethan Test Scene
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 454508955}
+        m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
+        m_MethodName: ChangeNumber
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 14
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1320593475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7415,11 +7661,11 @@ GameObject:
   - component: {fileID: 1335648988}
   m_Layer: 5
   m_Name: Main Screen (12)
-  m_TagString: Untagged
+  m_TagString: MapScreen
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1335648987
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7494,11 +7740,11 @@ GameObject:
   - component: {fileID: 1336723086}
   m_Layer: 5
   m_Name: Main Screen (3)
-  m_TagString: Untagged
+  m_TagString: MapScreen
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1336723085
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7573,11 +7819,11 @@ GameObject:
   - component: {fileID: 1368183507}
   m_Layer: 5
   m_Name: Main Screen (6)
-  m_TagString: Untagged
+  m_TagString: MapScreen
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1368183506
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7785,11 +8031,11 @@ GameObject:
   - component: {fileID: 1477519955}
   m_Layer: 5
   m_Name: Main Screen (15)
-  m_TagString: Untagged
+  m_TagString: MapScreen
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1477519954
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8400,7 +8646,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1576849135
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8477,6 +8723,18 @@ MonoBehaviour:
           m_StringArgument: Ethan Test Scene
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 454508955}
+        m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
+        m_MethodName: ChangeNumber
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 8
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1576849137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8528,11 +8786,11 @@ GameObject:
   - component: {fileID: 1703537608}
   m_Layer: 5
   m_Name: Main Screen (17)
-  m_TagString: Untagged
+  m_TagString: MapScreen
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1703537607
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8612,7 +8870,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1708420554
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8687,6 +8945,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Ethan Test Scene
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 454508955}
+        m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
+        m_MethodName: ChangeNumber
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 9
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1708420556
@@ -9031,6 +9301,18 @@ MonoBehaviour:
           m_StringArgument: Ethan Test Scene
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 454508955}
+        m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
+        m_MethodName: ChangeNumber
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 15
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1753494392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9348,11 +9630,11 @@ GameObject:
   - component: {fileID: 1833400524}
   m_Layer: 5
   m_Name: Main Screen (13)
-  m_TagString: Untagged
+  m_TagString: MapScreen
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1833400523
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9642,6 +9924,18 @@ MonoBehaviour:
           m_StringArgument: Ethan Test Scene
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 454508955}
+        m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
+        m_MethodName: ChangeNumber
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 12
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1851948682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9775,6 +10069,18 @@ MonoBehaviour:
           m_StringArgument: Ethan Test Scene
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 454508955}
+        m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
+        m_MethodName: ChangeNumber
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 16
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1859523824
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9826,11 +10132,11 @@ GameObject:
   - component: {fileID: 1883106228}
   m_Layer: 5
   m_Name: Main Screen (18)
-  m_TagString: Untagged
+  m_TagString: MapScreen
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1883106227
 RectTransform:
   m_ObjectHideFlags: 0
