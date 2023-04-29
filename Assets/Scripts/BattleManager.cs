@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [Serializable]
 public class BattleData
@@ -60,7 +61,16 @@ public class BattleManager : MonoBehaviour
 
    private void OnApplicationQuit()
    {
-       SaveGameStatus();
+       string CurrentScene = SceneManager.GetActiveScene().ToString();
+       if (CurrentScene == "Ethan Test Scene")
+       {
+           
+       }
+       else
+       {
+           SaveGameStatus();
+       }
+     
    }
 
    private void OnEnable()

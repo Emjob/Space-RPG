@@ -25,6 +25,6 @@ public class SceneChanger : MonoBehaviour
 
     public void ChangeNumber(int id)
     {
-        BattleManager.BattleData.currentScreen =id;
+        BattleManager.BattleData.currentScreen = id;
     }
 }
