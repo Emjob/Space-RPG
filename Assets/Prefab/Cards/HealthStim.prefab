@@ -147,6 +147,7 @@ MonoBehaviour:
   damage: 0
   speed: 0
   shield: 0
+  timer: 0
   myCam: {fileID: 0}
   Splash: 0
   Single: 1
