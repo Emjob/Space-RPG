@@ -25,7 +25,7 @@ This game uses these sounds from freesound:
 "METAL BANG.wav" by trexlasso (https://freesound.org/s/629999/) licensed under CC0 1.0
 "Klean kanteen falls and spills.WAV" by rocky12345 (https://freesound.org/s/120908/) licensed under CC BY-NC 3.0
 "Aircraft - Futuristic Aircraft hovering above ground.wav" by DamianMinnie (https://freesound.org/s/327538/) licensed under CC BY-NC 3.0
-"" by  () licensed under CC
+"JM_FX_Fireball 01.wav" by Julien Matthey (https://freesound.org/s/105016/) licensed under CC
 "" by  () licensed under CC
 "" by  () licensed under CC
 

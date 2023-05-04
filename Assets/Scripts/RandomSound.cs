@@ -160,6 +160,12 @@ public class RandomSound : MonoBehaviour
                     ClipsToPlay.Add(Clips);
                 }
                 break;
+            case 19: //FIREBALL
+                foreach (AudioClip Clips in Resources.LoadAll<AudioClip>("Sounds/Sound Effects/fireball"))
+                { 
+                    ClipsToPlay.Add(Clips);
+                }
+                break;
             default://WEIRD SOUND YOU SHOULDN'T BE ABLE TO HEAR
                 foreach (AudioClip Clips in Resources.LoadAll<AudioClip>("Sounds/Sound Effects/youshouldnthearthis"))
                 {
