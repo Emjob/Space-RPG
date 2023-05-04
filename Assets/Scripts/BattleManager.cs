@@ -23,14 +23,16 @@ public class BattleManager : MonoBehaviour
     void Start()
     {
         filePath = Application.persistentDataPath;
-        MapScreens = new List<GameObject>();
+        //MapScreens = new List<GameObject>();
         SceneChanger = GameObject.Find("LevelSelector").GetComponent<SceneChanger>();
         foreach (GameObject Screen in GameObject.FindGameObjectsWithTag("MapScreen"))
         {
             MapScreens.Add(Screen);
             Screen.SetActive(false);
         }
+        
         LoadGameStats();       
+
     }
     
     public void LoadGameStats()
@@ -42,13 +44,15 @@ public class BattleManager : MonoBehaviour
             currentScreenObj = MapScreens[BattleData.currentScreen];
             currentScreenObj.SetActive(true);
             Debug.Log("Game loaded successfully");
-            
+            Debug.Log(currentLevel);
+
         }
         else
         {
             currentScreenObj = MapScreens[0];
             currentScreenObj.SetActive(true);
             Debug.Log("No file here.");
+
         }
     }
     
