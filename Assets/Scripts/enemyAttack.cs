@@ -32,8 +32,11 @@ public class enemyAttack : MonoBehaviour
         {
                int n = Random.Range(0, 2);
             Debug.Log("ahahahdosidfijearngouiesarg");
-            Anim.SetBool("isAttacking1", true);
-            StartCoroutine(ExecuteAfterHurt(Anim.GetCurrentAnimatorStateInfo(0).length));
+            if (n == 0)
+            {
+                Anim.SetBool("isAttacking1", true);
+                StartCoroutine(ExecuteAfterHurt(Anim.GetCurrentAnimatorStateInfo(0).length));
+            }
 
             if (n == 1)
             {

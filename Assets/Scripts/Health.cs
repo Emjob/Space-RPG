@@ -28,7 +28,7 @@ public class Health : MonoBehaviour
     public bool getShield;
 
     Collider Collider;
-    Animator Anim;
+    public Animator Anim;
     
 
     GameObject[] enemies = new GameObject[3];
@@ -51,12 +51,13 @@ public class Health : MonoBehaviour
     public void PlayerTakeDamage(int damage)
     {
         currentHealth = currentHealth - damage;
-
+        Anim.SetBool("isHit", true);
         if (currentHealth <= 0 && isPlayerDead == false)
         {
             Destroy(gameObject);
             isPlayerDead = true;
         }
+        Anim.SetBool("isHit", false);
         healthBar.UpdateHealthBar();
     }
     public void PlayerHeal(int Heal)

@@ -65,15 +65,18 @@ public class PlayerAttack : MonoBehaviour, IDropHandler
         {
             acuire.DetectObjectWithRaycast();
             recievedDamage = acuire.target;
-            isTargeting = false;
+            
         }
         if (isTargeting == true && Dot == true)
         {
             acuire.DetectObjectWithRaycast();
             recievedDOT = acuire.target;
+            
+        }
+        if(myturn)
+        {
             isTargeting = false;
         }
-        
         if (Splash == true && myturn == true)
         {
             
@@ -135,6 +138,8 @@ public class PlayerAttack : MonoBehaviour, IDropHandler
         for (int i = 0; i < enemies.Length; i++)
         {
             enemies[i].GetComponent<Health>().currentHealth -= splashDamage;
+            enemies[i].GetComponent<Health>().Anim.SetBool("isHit", true);
+            enemies[i].GetComponent<Health>().Anim.SetBool("isHit", false);
         }
         splashDamage = 0;
         Splash = false;
@@ -149,7 +154,9 @@ public class PlayerAttack : MonoBehaviour, IDropHandler
             {
                 recievedDOT.GetComponent<Health>().currentHealth -= DOT;
                 turnCount -= 1;
-            }
+            recievedDOT.GetComponent<Health>().Anim.SetBool("isHit", true);
+            recievedDOT.GetComponent<Health>().Anim.SetBool("isHit", false);
+        }
             if (turnCount <= 0)
             {
                 DOT = 0;
@@ -163,7 +170,9 @@ public class PlayerAttack : MonoBehaviour, IDropHandler
         yield return new WaitForSeconds(time);
         
         recievedDamage.GetComponent<Health>().currentHealth -= instDamage;
-            instDamage = 0;
+        recievedDamage.GetComponent<Health>().Anim.SetBool("isHit", true);
+        recievedDamage.GetComponent<Health>().Anim.SetBool("isHit", false);
+        instDamage = 0;
             Attack = false;
         actions += 1;
         Anim.SetBool("isAttacking1", false);
