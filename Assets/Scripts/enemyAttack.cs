@@ -5,16 +5,18 @@ using UnityEngine;
 public class enemyAttack : MonoBehaviour
 {
 
-   // public bool turnStart;
+    // public bool turnStart;
 
     public int damage;
     public int Heal;
+
+    public bool myturn;
 
     Animator Anim;
 
     TurnOrder change;
 
-   public GameObject[] players;
+    public GameObject[] players;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,44 +26,50 @@ public class enemyAttack : MonoBehaviour
     }
 
     // Update is called once per frame
-    public void EnemyTurn()
+    public void Update()
     {
-        
-        int n = Random.Range(0, 2);
-            if(n == 0)
-            {
+        if (myturn == true)
+        {
+               int n = Random.Range(0, 2);
+            Debug.Log("ahahahdosidfijearngouiesarg");
             Anim.SetBool("isAttacking1", true);
             StartCoroutine(ExecuteAfterHurt(Anim.GetCurrentAnimatorStateInfo(0).length));
-        }
-            if(n == 1)
+
+            if (n == 1)
             {
-            Anim.SetBool("isHeal", true);
-            StartCoroutine(ExecuteAfterHeal(Anim.GetCurrentAnimatorStateInfo(0).length));
-            
+                Anim.SetBool("isShakir_Heal", true);
+                StartCoroutine(ExecuteAfterHeal(Anim.GetCurrentAnimatorStateInfo(0).length));
+
+            }
+            change.i += 1;
+            myturn = false;
+
         }
 
-       
 
     }
     IEnumerator ExecuteAfterHurt(float time)
     {
-        
         yield return new WaitForSeconds(time);
-        Anim.SetBool("isAttacking1", false);
+
         players[Random.Range(0, players.Length)].GetComponent<Health>().PlayerTakeDamage(damage);
         Debug.Log("Attack");
-     //   GetComponent<Renderer>().material.color = new Color(255, 0, 0);
-        // Code to execute after the delay
+        
+        
+        Anim.SetBool("isAttacking1", false);
+        //   GetComponent<Renderer>().material.color = new Color(255, 0, 0);
+
     }
     IEnumerator ExecuteAfterHeal(float time)
     {
-
         yield return new WaitForSeconds(time);
-        Anim.SetBool("isHeal", false);
-        GetComponent<Health>().EnemyHeal(Heal);
-     //   GetComponent<Renderer>().material.color = new Color(255, 0, 211);
-        Debug.Log("Heal");
 
-        // Code to execute after the delay
+        GetComponent<Health>().EnemyHeal(Heal);
+        //   GetComponent<Renderer>().material.color = new Color(255, 0, 211);
+        Debug.Log("Heal");
+        
+        
+        Anim.SetBool("isShakir_Heal", false);
+
     }
 }

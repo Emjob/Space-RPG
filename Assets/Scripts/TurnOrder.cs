@@ -28,11 +28,12 @@ public class TurnOrder : MonoBehaviour
         players = GameObject.FindGameObjectsWithTag("Player");
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
 
-        if (startOfTurn == true || i >= speed.Count)
+        if (startOfTurn == true)
         {
             hand.con = 0;
             hand.Draw();
             speed.Clear();
+            speed.Add(GameObject.Find("TurnStarter"));
             for (int i = 0; i < enemies.Length; i++)
             {
                 speed.Add(enemies[i]);
@@ -41,37 +42,37 @@ public class TurnOrder : MonoBehaviour
             {
                 speed.Add(players[i]);
             }
-            i = -1;
+            i = 0;
             speed.Sort(delegate (GameObject a, GameObject b)
             {
                 return (a.GetComponent<Stats>().Speed).CompareTo(b.GetComponent<Stats>().Speed);
             });
 
             speed.Reverse();
-            startOfTurn = false;
 
+            startOfTurn = false;
         }
 
-        if (changeTurn == true)
-        {
-
-            i += 1;
+        
             if (i >= speed.Count)
             {
                 startOfTurn = true;
-                changeTurn = false;
+                i = 0;
             }
-            if (speed[i].CompareTag("Player"))
+            if(speed[i].CompareTag("TurnStarter"))
+        {
+            i = 0;
+        }
+            if (speed[i].CompareTag("Player") && startOfTurn == false)
             {
                 speed[i].GetComponent<PlayerAttack>().myturn = true;
             }
-            if (speed[i].CompareTag("Enemy"))
+            if (speed[i].CompareTag("Enemy") && startOfTurn == false)
             {
-                speed[i].GetComponent<Health>().myturn = true;
-                speed[i].GetComponent<enemyAttack>().EnemyTurn();
+                speed[i].GetComponent<enemyAttack>().myturn = true;
             }
 
-        }
+        
 
         if (Input.GetKeyDown("c"))
         {

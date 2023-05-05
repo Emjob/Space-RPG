@@ -48,7 +48,7 @@ public class CardSpawner : MonoBehaviour
             {
                 Destroy(RemainingCards[i]);
             }
-            change.changeTurn = true;
+            change.i += 1;
             counter = 0;
         }
        
@@ -76,7 +76,8 @@ public class CardSpawner : MonoBehaviour
                     j += 1;
                     con += 1;
             }
-        }           
+        }   
+
     }
        // if(counter == 1)
        // {

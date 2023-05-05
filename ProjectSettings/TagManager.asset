@@ -12,6 +12,7 @@ TagManager:
   - EnemyThree
   - SpawnPoint
   - MapScreen
+  - TurnStarter
   layers:
   - Default
   - TransparentFX

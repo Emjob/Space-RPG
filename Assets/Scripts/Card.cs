@@ -48,12 +48,12 @@ public class Card : MonoBehaviour
             other.GetComponent<PlayerAttack>().isTargeting = true;
             other.GetComponent<Collider>().GetComponent<PlayerAttack>().Attack = true;
             other.GetComponent<Collider>().GetComponent<PlayerAttack>().instDamage += damage;
-            
+            other.GetComponent<PlayerAttack>().totalActions += 1;
             Destroy(gameObject);
         }
         if (damage > 0 && Splash)
         {
-            other.GetComponent<PlayerAttack>().isTargeting = true;
+            other.GetComponent<PlayerAttack>().totalActions += 1;
             other.GetComponent<Collider>().GetComponent<PlayerAttack>().Splash = true;
             other.GetComponent<Collider>().GetComponent<PlayerAttack>().splashDamage += damage;
             Count.counter += 1;
@@ -68,7 +68,7 @@ public class Card : MonoBehaviour
             {
              other.GetComponent<Collider>().GetComponent<PlayerAttack>().DOT += damage;
             }
-
+            other.GetComponent<PlayerAttack>().totalActions += 1;
             Destroy(gameObject);
         }
         if (Heal > 0 && Single)
@@ -76,6 +76,7 @@ public class Card : MonoBehaviour
             other.GetComponent<Collider>().GetComponent<PlayerAttack>().restore = true;
             other.GetComponent<Collider>().GetComponent<PlayerAttack>().Healing += Heal;
             Count.counter += 1;
+            other.GetComponent<PlayerAttack>().totalActions += 1;
             Destroy(gameObject);
         }
         if (Heal > 0 && DelayedHeal)
@@ -84,6 +85,7 @@ public class Card : MonoBehaviour
             other.GetComponent<Collider>().GetComponent<PlayerAttack>().healOnDelay += Heal;
             other.GetComponent<Collider>().GetComponent<PlayerAttack>().delay += timer;
             Count.counter += 1;
+            other.GetComponent<PlayerAttack>().totalActions += 1;
             Destroy(gameObject);
         }
         if (shield > 0 && Single)
@@ -91,6 +93,7 @@ public class Card : MonoBehaviour
             other.GetComponent<Collider>().GetComponent<PlayerAttack>().getShield = true;
             other.GetComponent<Collider>().GetComponent<PlayerAttack>().Shielding += shield;
             Count.counter += 1;
+            other.GetComponent<PlayerAttack>().totalActions += 1;
             Destroy(gameObject);
         }
     }
