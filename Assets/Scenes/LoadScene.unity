@@ -698,16 +698,16 @@ MonoBehaviour:
     Different
     paths you take will offer different loot such as item drops and new party members.
 
-    
+
 
     When
     in combat you receive five random cards from your deck. Each card has a different
     effect. Some heal or apply shield. Others attack enemies.
 
-    
 
-    Each one
-    of your party members attack separately. When it''s your turn you attack by dragging
+
+    Each one of
+    your party members attack separately. When it''s your turn you attack by dragging
     any card onto one of your party members.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 07c571ab1c26e4e4e8dd01481794f48a, type: 2}
@@ -1233,6 +1233,7 @@ GameObject:
   m_Component:
   - component: {fileID: 631191575}
   - component: {fileID: 631191574}
+  - component: {fileID: 631191576}
   m_Layer: 0
   m_Name: Level Manager
   m_TagString: Untagged
@@ -1267,6 +1268,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &631191576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 631191573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4be24d37df395bd438d8691fa82fd7ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BattleData:
+    currentScreen: 0
+  MapScreens: []
+  filePath: 
+  currentScreenObj: {fileID: 0}
 --- !u!1 &924818259
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,16 +10,19 @@ public class SceneChanger : MonoBehaviour
 
     void Start()
     {
-        DontDestroyOnLoad(gameObject);
+        
         BattleManager = GetComponent<BattleManager>();
+        DontDestroyOnLoad(gameObject);
     }
      
 
      public void LoadScene(string MenuNavigation)
-     { 
+     {
         //BattleManager.BattleData.currentScreen = BattleManager.MapScreens[i];
         BattleManager.SaveGameStatus();
         SceneManager.LoadScene(MenuNavigation);
+        
+        
         
     }
 

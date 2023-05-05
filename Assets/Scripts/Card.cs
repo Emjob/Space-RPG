@@ -29,11 +29,14 @@ public class Card : MonoBehaviour
     new Collider collider;
 
     CardSpawner Count;
+    PlayerAttack player;
 
     GameObject[] enemies = new GameObject[3];
+    GameObject[] players = new GameObject[3];
 
     private void Start()
     {
+        
         collider = GetComponent<Collider>();
         myCam = Camera.main;
         Count = GameObject.Find("Holder").GetComponent<CardSpawner>();
@@ -101,7 +104,21 @@ public class Card : MonoBehaviour
 
     void Update()
     {
+        players = GameObject.FindGameObjectsWithTag("Player");
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
+
+        for(int i = 0; i  < players.Length; i ++)
+        {
+            if(players[i].GetComponent<PlayerAttack>().isTargeting == true)
+            {
+                collider.enabled = false;
+            }
+            if (players[i].GetComponent<PlayerAttack>().isTargeting == false)
+            {
+                collider.enabled = true;
+            }
+        }
+
         if (isDragging)
         {
             DragObject();

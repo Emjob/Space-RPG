@@ -66,11 +66,7 @@ public class BattleManager : MonoBehaviour
    private void OnApplicationQuit()
    {
        string CurrentScene = SceneManager.GetActiveScene().ToString();
-       if (CurrentScene == "Ethan Test Scene")
-       {
-           
-       }
-       else
+       if (CurrentScene != "Ethan Test Scene")
        {
            SaveGameStatus();
        }

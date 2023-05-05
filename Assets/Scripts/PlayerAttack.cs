@@ -65,14 +65,17 @@ public class PlayerAttack : MonoBehaviour, IDropHandler
         {
             acuire.DetectObjectWithRaycast();
             recievedDamage = acuire.target;
-            
+        }
+        if(recievedDamage != null)
+        {
+            isTargeting = false;
         }
         if (isTargeting == true && Dot == true)
         {
             acuire.DetectObjectWithRaycast();
             recievedDOT = acuire.target;
-            
         }
+
         if(myturn)
         {
             isTargeting = false;
@@ -125,7 +128,10 @@ public class PlayerAttack : MonoBehaviour, IDropHandler
 
         if(actions >= totalActions && myturn == true)
         {
+            recievedDamage = null;
             turn.i += 1;
+            totalActions = 0;
+            actions = 0;
             myturn = false;
         }
         
