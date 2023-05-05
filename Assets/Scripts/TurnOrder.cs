@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.SceneManagement;
+
 
 public class TurnOrder : MonoBehaviour
 {
@@ -49,6 +51,10 @@ public class TurnOrder : MonoBehaviour
             });
 
             speed.Reverse();
+            if(players.Length == 0 || enemies.Length == 0)
+            {
+                SceneManager.LoadScene("MenuNavigation");
+            }
 
             startOfTurn = false;
         }
