@@ -22,7 +22,11 @@ public class mouseDetect : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        state = GameObject.FindGameObjectsWithTag("Player");         
+        state = GameObject.FindGameObjectsWithTag("Player");   
+        if(Count.counter == Count.players.Length)
+        {
+            target = null;
+        }
     }
 
     public void DetectObjectWithRaycast()
@@ -46,7 +50,6 @@ public class mouseDetect : MonoBehaviour
                 {
                     state[i].GetComponent<PlayerAttack>().isTargeting = false;
                 }
-                target = null;
             }
         }
     }

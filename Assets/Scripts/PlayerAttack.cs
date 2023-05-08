@@ -8,6 +8,7 @@ public class PlayerAttack : MonoBehaviour, IDropHandler
 
     mouseDetect acuire;
     TurnOrder turn;
+    CardSpawner Count;
 
     public GameObject recievedDamage;
     public GameObject recievedDOT;
@@ -52,6 +53,7 @@ public class PlayerAttack : MonoBehaviour, IDropHandler
     {
         acuire = GameObject.Find("Dectector").GetComponent<mouseDetect>();
         turn = GameObject.Find("TurnChanger").GetComponent<TurnOrder>();
+        Count = GameObject.Find("Holder").GetComponent<CardSpawner>();
         Collider = GetComponent<Collider>();
         Anim = gameObject.GetComponent<Animator>();
         
@@ -66,16 +68,16 @@ public class PlayerAttack : MonoBehaviour, IDropHandler
             acuire.DetectObjectWithRaycast();
             recievedDamage = acuire.target;
         }
-        if(recievedDamage != null)
-        {
-            isTargeting = false;
-        }
+        
         if (isTargeting == true && Dot == true)
         {
             acuire.DetectObjectWithRaycast();
             recievedDOT = acuire.target;
         }
-
+        if(Count.counter == Count.players.Length)
+        {
+            isTargeting = false;
+        }
         if(myturn)
         {
             isTargeting = false;

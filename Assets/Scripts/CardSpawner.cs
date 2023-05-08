@@ -9,7 +9,7 @@ public class CardSpawner : MonoBehaviour
     public GameObject[] Deck;
     public GameObject[] activeDeck = new GameObject[15];
     GameObject[] RemainingCards;
-    GameObject[] players;
+    public GameObject[] players;
 
    
     public Stats Health;
