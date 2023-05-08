@@ -77,5 +77,17 @@ public class BattleManager : MonoBehaviour
     {
         hideFlags = HideFlags.DontUnloadUnusedAsset;
     }
+
+   public void ResetGame()
+   {
+       File.Delete(filePath + "/" + FILE_NAME);
+       Debug.Log("File erased.");
+   }
+
+   public void ExitGame()
+   {
+       Application.Quit();
+       Debug.Log("Quit called.");
+   }
 }
 
