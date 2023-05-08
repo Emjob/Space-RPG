@@ -44,12 +44,13 @@ public class mouseDetect : MonoBehaviour
                 if (hit.collider.CompareTag("Enemy"))
                 {
                     target = hit.collider.gameObject;
+                    for (int i = 0; i < state.Length; i++)
+                    {
+                        state[i].GetComponent<PlayerAttack>().isTargeting = false;
+                    }
                 }
                 
-                for(int i = 0; i < state.Length; i ++)
-                {
-                    state[i].GetComponent<PlayerAttack>().isTargeting = false;
-                }
+                
             }
         }
     }
