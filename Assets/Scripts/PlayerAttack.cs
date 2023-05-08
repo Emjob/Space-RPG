@@ -44,7 +44,6 @@ public class PlayerAttack : MonoBehaviour, IDropHandler
 
     Collider Collider;
     Animator Anim;
-    
 
     GameObject[] enemies;
 
@@ -146,6 +145,7 @@ public class PlayerAttack : MonoBehaviour, IDropHandler
         for (int i = 0; i < enemies.Length; i++)
         {
             enemies[i].GetComponent<Health>().currentHealth -= splashDamage;
+            enemies[i].GetComponent<Health>().healthBar.UpdateHealthBar();
             enemies[i].GetComponent<Health>().Anim.SetBool("isHit", true);
             enemies[i].GetComponent<Health>().Anim.SetBool("isHit", false);
         }
@@ -161,7 +161,8 @@ public class PlayerAttack : MonoBehaviour, IDropHandler
         if (turnCount >= 0)
             {
                 recievedDOT.GetComponent<Health>().currentHealth -= DOT;
-                turnCount -= 1;
+            recievedDOT.GetComponent<Health>().healthBar.UpdateHealthBar();
+            turnCount -= 1;
             recievedDOT.GetComponent<Health>().Anim.SetBool("isHit", true);
             recievedDOT.GetComponent<Health>().Anim.SetBool("isHit", false);
         }
@@ -178,6 +179,7 @@ public class PlayerAttack : MonoBehaviour, IDropHandler
         yield return new WaitForSeconds(time);
         
         recievedDamage.GetComponent<Health>().currentHealth -= instDamage;
+        recievedDamage.GetComponent<Health>().healthBar.UpdateHealthBar();
         recievedDamage.GetComponent<Health>().Anim.SetBool("isHit", true);
         recievedDamage.GetComponent<Health>().Anim.SetBool("isHit", false);
         instDamage = 0;
