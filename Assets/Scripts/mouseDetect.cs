@@ -37,13 +37,16 @@ public class mouseDetect : MonoBehaviour
                 Count.counter += 1;
                 Debug.Log($"{hit.collider.name} Detected",
                     hit.collider.gameObject);
+                if (hit.collider.CompareTag("Enemy"))
+                {
+                    target = hit.collider.gameObject;
+                }
                 
-                target = hit.collider.gameObject;
                 for(int i = 0; i < state.Length; i ++)
                 {
                     state[i].GetComponent<PlayerAttack>().isTargeting = false;
                 }
-
+                target = null;
             }
         }
     }
